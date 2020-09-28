@@ -5,3 +5,13 @@ Nesse capítulo você irá aprender uma maneira rápida e direta de como criar u
 Nesse contexto, o método Haar Cascade, é um método de detecção de objetos proposto por Paul Viola e Michael Jones. É uma abordagem baseada em Machine Learning, em que uma função cascade é treinada com muitas imagens positivas e negativas. Logo, é usado para  detectar objetos em outras imagens.
 
 ## Preparando o ambiente
+
+Para esse projeto é necessário que você tenha instalado em sua máquina apenas 3 itens.
+
+1 - Editor de textos de sua preferência, eu particularmente uso o Visual Studio Code.
+
+2 - Alguma versão Python de sua preferência, eu particularmente uso a  3.8.5
+
+3 - Biblioteca OpenCV .
+
+Aqui não irei explicar como você pode fazer o download e instalação desses itens, pois na internet existem diversos tutorias detalhados de como fazer isso.
