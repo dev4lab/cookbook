@@ -4,7 +4,7 @@ Assim como em diversas aplicações da Matemática, podemos utilizar elementos d
 
 <div align="center">
     <p align="center">
-    <img src="../imagens-natalia/Quadra.jpg"/>
+    <img src="../imagens/cap2/Quadra.jpg"/>
     </p>
     <p> Pista de Corrida </p>
 </div>
