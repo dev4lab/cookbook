@@ -1,1 +1,5 @@
 # Detecção de objetos com haarcascade
+
+Nesse capítulo você irá aprender de uma maneira rápida e direta como criar um classificador Haar Cascade. Além disso, no final do capítulo será disponibilizado um código para detecção de objetos com o classificador criado, que com pequenas alterações, pode se adequar a qualquer tipo de situação.
+
+Nesse contexto, o método Haar Cascade, é um método de detecção de objetos proposto por Paul Viola e Michael Jones. É uma abordagem baseada em Machine Learning, em que uma função cascade é treinada com muitas imagens positivas e negativas. Logo, é usado para  detectar objetos em outras imagen.
