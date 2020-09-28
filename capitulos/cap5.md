@@ -31,6 +31,7 @@ A criação de um classficador usando o HaarCascade pode ser descrita em um conj
 
 
 2 - Selecionar imagens negativas.
+
     * Podem ser qualquer coisa, menos o objeto
 
     * Devem ser maiores que as positivas, pois o openCV vai colocar as imagens positivas dentro das negativas.
