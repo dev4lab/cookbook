@@ -1,8 +1,12 @@
+<div align="center">
+    <p align="center">
+    <img src="imagens/capa.png"/>
+    </p>
+</div>
+
 # COOKBOOK DE VISÃO COMPUTACIONAL PARA INICIANTES
 
 Neste cookbook você vai encontrar projetos rápidos elaborados para te introduzir ao mundo da Visão Computacional (ou até mesmo para refrescar sua memória sobre alguns temas).
-
-
 ## Lista de Tópicos
 
 [Capítulo 1: Detecção de Bordas](capitulos/cap1.md)
