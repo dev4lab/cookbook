@@ -19,6 +19,7 @@ Aqui não irei explicar como você pode fazer o download e instalação desses i
 ## Passos
 
 A criação de um classficador usando o HaarCascade pode ser descrita em um conjunto de 5 passos.
+
 1 - Escolher o objeto.
 
     * Serão objetos rígidos como uma logo (nike) ou com variações (cadeira,copo)?
