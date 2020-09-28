@@ -14,9 +14,7 @@ Para esse projeto é necessário que você tenha instalado em sua máquina apena
 
 3 - Biblioteca OpenCV .
 
-Aqui não irei explicar como você pode fazer o download e instalação desses itens, pois na internet existem diversos tutorias detalhados de como fazer isso.
-
-## Passos
+Aqui não irei explicar como você pode fazer o download e instalação desses itens, pois na internet existem diversos tutorias detalhados de como fazer isso.## Passos
 
 A criação de um classficador usando o HaarCascade pode ser descrita em um conjunto de 5 passos.
 
@@ -33,11 +31,11 @@ A criação de um classficador usando o HaarCascade pode ser descrita em um conj
 
 2 - Selecionar imagens negativas.
 
-    * Podem ser qualquer coisa, menos o objeto
+    * Podem ser qualquer coisa, menos o objeto.
 
     * Devem ser maiores que as positivas, pois a openCV vai colocar as imagens positivas dentro das negativas.
 
-    * Se possível usar fotos de prováveis fundos onde o objeto é encontrado
+    * Se possível usar fotos de prováveis fundos onde o objeto é encontrado.
 
         *Ex: Objeto = carro
          Usar imagens de asfalto e ruas vazias.
@@ -45,7 +43,7 @@ A criação de um classficador usando o HaarCascade pode ser descrita em um conj
 
 3 - Selecionar imagens positivas.
 
-    * Apenas o objeto
+    * Apenas o objeto.
 
     * Quantas imagens?
 
