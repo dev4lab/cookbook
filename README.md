@@ -18,10 +18,9 @@ Neste cookbook você vai encontrar projetos rápidos elaborados para te introduz
 [Capítulo 6: Detector de faces](capitulos/cap6.md)
 
 
-## Como o e-book está organizado
+## O que eu vou encontrar em cada capítulo?
 
-Este e-book está organizado em capítulos. Em cada capítulo você encontrará a descrição passo-a-passo para elaboração de um pequeno projeto.
-
+Uma breve explicação teórica sobre o assunto referente ao capítulo ao mesmo tempo que você executa um pequeno projeto escrito na forma de passo a passo.
 
 ## Eu preciso ler os capítulos em ordem?
 
