@@ -14,7 +14,9 @@ Para esse projeto é necessário que você tenha instalado em sua máquina apena
 
 3 - Biblioteca OpenCV .
 
-Aqui não irei explicar como você pode fazer o download e instalação desses itens, pois na internet existem diversos tutorias detalhados de como fazer isso.## Passos
+Aqui não irei explicar como você pode fazer o download e instalação desses itens, pois na internet existem diversos tutorias detalhados de como fazer isso.
+
+## Passos
 
 A criação de um classficador usando o HaarCascade pode ser descrita em um conjunto de 5 passos.
 
