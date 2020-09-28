@@ -19,7 +19,8 @@ Aqui não irei explicar como você pode fazer o download e instalação desses i
 ## Passos
 
 A criação de um classficador usando o HaarCascade pode ser descrita em um conjunto de 5 passos.
-1 - Escolher o objeto
+1 - Escolher o objeto.
+
     * serão objetos rígidos como uma logo (nike) ou com variações (cadeira,copo)?
 
     * Objetos rigidos são mais eficientes e mais rápidos.
@@ -29,7 +30,7 @@ A criação de um classficador usando o HaarCascade pode ser descrita em um conj
     * Objetos que a cor é fundamental não são recomendados, pois as imagens serão passadas para a escala de cinza.
 
 
-2 - Selecionar imagens negativas
+2 - Selecionar imagens negativas.
     * Podem ser qualquer coisa, menos o objeto
 
     * Devem ser maiores que as positivas, pois o openCV vai colocar as imagens positivas dentro das negativas.
@@ -40,7 +41,8 @@ A criação de um classficador usando o HaarCascade pode ser descrita em um conj
          Usar imagens de asfalto e ruas vazias.
 
 
-3 - Selecionar imagens positivas
+3 - Selecionar imagens positivas.
+
     * Apenas o objeto
 
     * Quantas imagens?
@@ -57,7 +59,7 @@ A criação de um classficador usando o HaarCascade pode ser descrita em um conj
 
 
 
-4 - Gerar um vetor de positivas
+4 - Gerar um vetor de positivas.
 
 
-5 - Treinar o classificador
+5 - Treinar o classificador.
