@@ -35,7 +35,7 @@ A criação de um classficador usando o HaarCascade pode ser descrita em um conj
 
     * Podem ser qualquer coisa, menos o objeto
 
-    * Devem ser maiores que as positivas, pois o openCV vai colocar as imagens positivas dentro das negativas.
+    * Devem ser maiores que as positivas, pois a openCV vai colocar as imagens positivas dentro das negativas.
 
     * Se possível usar fotos de prováveis fundos onde o objeto é encontrado
 
