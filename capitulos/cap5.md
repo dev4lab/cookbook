@@ -22,43 +22,11 @@ A criação de um classficador usando o HaarCascade pode ser descrita em um conj
 
 1 - Escolher o objeto.
 
-    * Serão objetos rígidos como uma logo (nike) ou com variações (cadeira,copo)?
-
-    * Objetos rigidos são mais eficientes e mais rápidos.
-
-    * Ao treinar muitas variações pode ser que o classificador fique fraco, portanto, fique atento a isso.
-
-    * Objetos que a cor é fundamental não são recomendados, pois as imagens serão passadas para a escala de cinza.
-
 
 2 - Selecionar imagens negativas.
 
-    * Podem ser qualquer coisa, menos o objeto.
-
-    * Devem ser maiores que as positivas, pois a openCV vai colocar as imagens positivas dentro das negativas.
-
-    * Se possível usar fotos de prováveis fundos onde o objeto é encontrado.
-
-        *Ex: Objeto = carro
-         Usar imagens de asfalto e ruas vazias.
-
 
 3 - Selecionar imagens positivas.
-
-    * Apenas o objeto.
-
-    * Quantas imagens?
-
-        * Depende da: Qualidade da imagem, tipo do objeto, poder computacional disponível.
-
-    * As imagens devem ter o mesmo tamanho.
-
-    * A proporção precisa ser a mesma, caso contrário a openCV faz isso automaticamente e gera problemas de distorção do objeto.
-
-        * Ex: Uma imagem 100x50, passada pra 25x25, vai ter o objeto descaracterizado.
-
-    * Imagens grandes podem gerar problemas, fazendo o treinamento durar até meses.
-
 
 
 4 - Gerar um vetor de positivas.
