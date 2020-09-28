@@ -4,11 +4,12 @@ Assim como em diversas aplicações da Matemática, podemos utilizar elementos d
 
 <div align="center">
     <p align="center">
-    <img src="imagens-natalia/Quadra.jpg"/>
+    <img src="../imagens-natalia/Quadra.jpg"/>
     </p>
     <p> Pista de Corrida </p>
 </div>
 
 Na imagem acima, podemos perceber a presença de uma pista de corrida. Podemos facilmente concluir que é uma pistada de corrida observando sua forma e podemos dizer que sabemos quais pixels pertencem à esta pista através da similaridade que existe entre eles. Podemos disser (de uma forma grosseira) que o conjunto de todos pixels azuis formam a pista de corrida.
 
+<div align="center">
 <img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
