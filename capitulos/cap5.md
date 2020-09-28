@@ -21,7 +21,7 @@ Aqui não irei explicar como você pode fazer o download e instalação desses i
 A criação de um classficador usando o HaarCascade pode ser descrita em um conjunto de 5 passos.
 1 - Escolher o objeto.
 
-    * serão objetos rígidos como uma logo (nike) ou com variações (cadeira,copo)?
+    * Serão objetos rígidos como uma logo (nike) ou com variações (cadeira,copo)?
 
     * Objetos rigidos são mais eficientes e mais rápidos.
 
@@ -47,7 +47,7 @@ A criação de um classficador usando o HaarCascade pode ser descrita em um conj
 
     * Quantas imagens?
 
-        Depende da: Qualidade da imagem, tipo do objeto, poder computacional disponível.
+        * Depende da: Qualidade da imagem, tipo do objeto, poder computacional disponível.
 
     * As imagens devem ter o mesmo tamanho.
 
