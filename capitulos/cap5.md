@@ -103,7 +103,7 @@ E deve executá-lo ao final da escolha das imagens negativas, pois ele vai gerar
 Ex:
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap2/1.jpg" width="200" height="200"/>
+    <img src="../imagens/cap2/1.jpg" width="1000" height="200"/>
     </p>
     <p> <b>Figura 3</b>  </p>
 </div>
