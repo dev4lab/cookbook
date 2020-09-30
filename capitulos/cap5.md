@@ -65,6 +65,7 @@ Logo, você deve ficar atento as iamgens escolhidas, pois como dito elas podem s
 
 Quantas imagens negativas?
 É relativo, para esse projeto eu conto com 3000 imagens negativas, com diversas variações de fundo. Entretanto, isso vai depender dos resultados obtidos no treinamento, pode ser que eu precise de mais imagens ou não, isso será explicado mais a frente com mais detalhes.
+
 Ex:
 
 <div align="center">
