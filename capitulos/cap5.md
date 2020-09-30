@@ -49,3 +49,16 @@ O primeiro passo é escolher o objeto que será identificado, para isso você de
 Para esse projeto, escolhi o objeto faca para ser detectado.
 
 ### 2 - Selecionar imagens negativas.
+
+Para selecionar as imagens negativas, você deve ficar atento aos seguintes aspectos:
+
+    * Podem ser qualquer coisa, menos o objeto.
+
+    * Devem ser maiores que as positivas, pois a openCV vai colocar as imagens positivas dentro das negativas.
+
+    * Se possível usar fotos de prováveis fundos onde o objeto é encontrado.
+
+        *Ex: Objeto = carro
+         Usar imagens de asfalto e ruas vazias.
+
+Logo, você deve ficar atento as iamgens escolhidas, pois como dito elas podem ser qualquer coisa, exceto o objeto escolhido, como escolhemos facas como objeto de detecção devemos, iremos precisar de imagens que não tenham facas.
