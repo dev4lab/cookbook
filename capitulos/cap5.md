@@ -91,6 +91,16 @@ Ex:
 
 OBS: Todas essas imagens tem dimensões 100x100, essa informação será importante para futuras explicações.
 
+Aqui é importante mencionar que você deve criar uma pasta (ex: projeto) onde estarão outras duas pastas, uma com as imagens negativas e outra com as imagens positivas.
+Na pasta das imagens negativas você deve colocar esse arquivo:
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap2/criar_lista.bat" width="100" height="100"/>
+    </p>
+    <p> <b>Figura 3</b>  </p>
+</div>
+E deve executá-lo ao final da escolha das imagens negativas, pois ele vai gerar uma lista com as imagens negativas.
+
 ### 3 -Selecionar imagens positivas.
 
 Para selecionar as imagens positivas, você deve ficar atento aos seguintes aspectos:
@@ -136,4 +146,8 @@ Exemplos de imagens positivas que irei usar para o treinamento do classificador:
     </p>
     <p> <b>Figura 3</b>  </p>
 </div>
+
+OBS: Todas essas imagens tem dimensões 100x50, essa informação será importante para explicações futuras.
+
+Aqui temos o pulo do gato, é possível criar mais imagens positivas a partir das imagens que você já tem, para isso basta abrir o CMD, entrar na pasta onde estão suas imagens positivas e digitar esse comando:
 
