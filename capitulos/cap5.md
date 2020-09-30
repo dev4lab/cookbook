@@ -162,7 +162,7 @@ Aqui temos o pulo do gato, é possível criar mais imagens positivas a partir da
 
 https://github.com/luis131313/cookbook/blob/master/imagens/cap2/opencv_createsamples.exe
 
-Coloque ele junto com as imagens positivas, depois basta abrir o CMD, entrar na pasta onde estão suas imagens 
+Coloque ele junto com as imagens positivas, depois basta abrir o CMD, entrar na pasta onde estão suas imagens positivas e digitar esse comando:
 
 .
 
