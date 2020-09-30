@@ -62,3 +62,6 @@ Para selecionar as imagens negativas, você deve ficar atento aos seguintes aspe
          Usar imagens de asfalto e ruas vazias.
 
 Logo, você deve ficar atento as iamgens escolhidas, pois como dito elas podem ser qualquer coisa, exceto o objeto escolhido, como escolhemos facas como objeto de detecção devemos, iremos precisar de imagens que não tenham facas.
+
+Quantas imagens negativas?
+É relativo, para esse projeto eu conto com 3000 imagens negativas, com diversas variações de fundo. Entretanto, isso vai depender dos resultados obtidos no treinamento, pode ser que eu precise de mais imagens ou não, isso será explicado mais a frente com mais detalhes.
