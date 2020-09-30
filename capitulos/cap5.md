@@ -158,7 +158,11 @@ Exemplos de imagens positivas que irei usar para o treinamento do classificador:
 
 OBS: Todas essas imagens tem dimensões 100x50, essa informação será importante para explicações futuras.
 
-Aqui temos o pulo do gato, é possível criar mais imagens positivas a partir das imagens que você já tem, para isso basta abrir o CMD, entrar na pasta onde estão suas imagens positivas e digitar esse comando:
+Aqui temos o pulo do gato, é possível criar mais imagens positivas a partir das imagens que você já tem, para isso baixe esse arquivo:
+
+https://github.com/luis131313/cookbook/blob/master/imagens/cap2/opencv_createsamples.exe
+
+Coloque ele junto com as imagens positivas, depois basta abrir o CMD, entrar na pasta onde estão suas imagens 
 
 .
 
