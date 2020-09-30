@@ -206,7 +206,7 @@ Ex:
 
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap2/2.jpg" width="1000" height="200"/>
+    <img src="../imagens/cap2/2.jpg" width="1000" height="1000"/>
     </p>
     <p> <b>Pasta</b>  </p>
 </div>
