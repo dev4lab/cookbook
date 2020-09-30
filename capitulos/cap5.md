@@ -118,6 +118,8 @@ Para selecionar as imagens positivas, você deve ficar atento aos seguintes aspe
 
     * Imagens grandes podem gerar problemas, fazendo o treinamento durar até meses.
 
+    * Sempre que possível usar imagens com fundo branco.
+
 Como dito no primeiro passo, você deve tomar cuidado com as variações do objeto, caso você queira realizar a detecção de um objeto em diferentes ângulos é sugerido que você faça diferentes classificadores. Para exemplificar isso, cito o classificador haarcascade frontalface, que realiza a detecção frontal da face (esse classificador inclusive é de fácil acesso, até a openCV disponibiliza ele pra você) e caso você queira a detecção lateral da face, você deve usar outro classificador, esses cuidados devem ser tomados para que você tenha um bom classificador.
 
 Em relação a quantidade, alguns estudos sugerem que um bom classificador deve ter no mínimo 5000 mil imagens como entrada para o treinamento.
@@ -156,7 +158,11 @@ opencv_createsamples -img faca_1 -bg negativas/bg.txt -info positivas/positivas.
 Parâmetros:
 
 -img = Nome da imagem base.
+
 -bg = Diretório e nome do arquivo com as informações das imagens negativas.
+
 -maxangle (x,y,z) =  Variação de rotação que a imagem terá.
+
 -num = Número de imagens que serão criadas.
+
 -bgtresh = parâmetro que permite a retirada do fundo da imagem, deixando apenas o objeto de interesse (aqui se justifica o fundo branco).
