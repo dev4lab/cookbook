@@ -33,3 +33,6 @@ A criação de um classficador usando o HaarCascade pode ser descrita em um conj
 
 
 5 - Treinar o classificador.
+
+### 1 - Escolher o objeto.
+
