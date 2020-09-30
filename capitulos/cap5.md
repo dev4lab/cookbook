@@ -151,3 +151,12 @@ OBS: Todas essas imagens tem dimensões 100x50, essa informação será importan
 
 Aqui temos o pulo do gato, é possível criar mais imagens positivas a partir das imagens que você já tem, para isso basta abrir o CMD, entrar na pasta onde estão suas imagens positivas e digitar esse comando:
 
+opencv_createsamples -img faca_1 -bg negativas/bg.txt -info positivas/positivas.lst -maxxangle 0.5 -maxyangle 0.5 -maxzangle 0.5 -num 1800 -bgcolor 255 -bgthresh 10
+
+Parâmetros:
+
+-img = Nome da imagem base.
+-bg = Diretório e nome do arquivo com as informações das imagens negativas.
+-maxangle (x,y,z) =  Variação de rotação que a imagem terá.
+-num = Número de imagens que serão criadas.
+-bgtresh = parâmetro que permite a retirada do fundo da imagem, deixando apenas o objeto de interesse (aqui se justifica o fundo branco).
