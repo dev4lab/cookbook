@@ -169,7 +169,6 @@ Aqui temos o pulo do gato, é possível criar mais imagens positivas a partir da
 opencv_createsamples -img faca_1.png -bg negativas/bg.txt -info positivas/positivas.lst -maxxangle 0.5 -maxyangle 0.5 -maxzangle 0.5 -num 1800 -bgcolor 255 -bgthresh 10
 
 .
-
 .
 
 Parâmetros:
@@ -185,9 +184,10 @@ Parâmetros:
 -num = Número de imagens que serão criadas.
 
 -bgtresh = parâmetro que permite a retirada do fundo da imagem, deixando apenas o objeto de interesse (aqui se justifica o fundo branco). Esse parâmetro deve ser analisado com cuidado, pois:
+
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap2/1.jpg" width="100" height="50"/>
+    <img src="../imagens/cap2/8.jpg" width="100" height="50"/>
     </p>
     <p> <b>bgtresh 10</b>  </p>
 </div>
