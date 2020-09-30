@@ -99,3 +99,47 @@ Ex:
 OBS: Todas essas imagens tem dimensões 100x100, essa informação será importante para futuras explicações.
 
 ### 3 -Selecionar imagens positivas.
+
+Para selecionar as imagens positivas, você deve ficar atento aos seguintes aspectos:
+
+    * Apenas o objeto.
+
+    * Quantas imagens?
+
+        * Depende da: Qualidade da imagem, tipo do objeto, poder computacional disponível.
+
+    * As imagens devem ter o mesmo tamanho e a proporção precisa ser a mesma, caso contrário a openCV faz isso automaticamente e gera problemas de distorção do objeto.
+
+        * Ex: Uma imagem 100x50, passada pra 25x25, vai ter o objeto descaracterizado.
+
+    * Imagens grandes podem gerar problemas, fazendo o treinamento durar até meses.
+
+Como dito no primeiro passo, você deve tomar cuidado com as variações do objeto, caso você queira realizar a detecção de um objeto em diferentes ângulos é sugerido que você faça diferentes classificadores. Para exemplificar isso, cito o classificador haarcascade frontalface, que realiza a detecção frontal da face (esse classificador inclusive é de fácil acesso, até a openCV disponibiliza ele pra você) e caso você queira a detecção lateral da face, você deve usar outro classificador, esses cuidados devem ser tomados para que você tenha um bom classificador.
+
+Em relação a quantidade, alguns estudos sugerem que um bom classificador deve ter no mínimo 5000 mil imagens como entrada para o treinamento.
+
+Exemplos de imagens positivas que irei usar para o treinamento do classificador:
+
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap2/faca_9.png" width="100" height="50"/>
+    </p>
+    <p> <b>Figura 1</b>  </p>
+</div>
+
+
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap2/faca_4.png" width="100" height="50"/>
+    </p>
+    <p> <b>Figura 2</b>  </p>
+</div>
+
+
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap2/faca_10.png" width="100" height="50"/>
+    </p>
+    <p> <b>Figura 3</b>  </p>
+</div>
+
