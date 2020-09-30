@@ -91,7 +91,7 @@ Ex:
 
 OBS: Todas essas imagens tem dimensões 100x100, essa informação será importante para futuras explicações.
 
-Aqui é importante mencionar que você deve criar uma pasta (ex: projeto) onde estarão outras duas pastas, uma com as imagens negativas e outra com as imagens positivas.
+Aqui é importante mencionar que você deve criar uma pasta (ex: projeto) onde estará outra pasta com as imagens negativas, na pasta projeto também deve estar as imagens positivas.
 Na pasta das imagens negativas você deve colocar esse arquivo:
 <div align="center">
     <p align="center">
@@ -100,6 +100,13 @@ Na pasta das imagens negativas você deve colocar esse arquivo:
     <p> <b>Figura 3</b>  </p>
 </div>
 E deve executá-lo ao final da escolha das imagens negativas, pois ele vai gerar uma lista com as imagens negativas.
+Ex:
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap2/1.jpg" width="200" height="200"/>
+    </p>
+    <p> <b>Figura 3</b>  </p>
+</div>
 
 ### 3 -Selecionar imagens positivas.
 
