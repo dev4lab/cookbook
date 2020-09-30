@@ -108,7 +108,8 @@ Para selecionar as imagens positivas, você deve ficar atento aos seguintes aspe
 
         * Depende da: Qualidade da imagem, tipo do objeto, poder computacional disponível.
 
-    * As imagens devem ter o mesmo tamanho e a proporção precisa ser a mesma, caso contrário a openCV faz isso automaticamente e gera problemas de distorção do objeto.
+    * As imagens devem ter o mesmo tamanho e a proporção precisa ser a mesma, caso contrário a openCV faz isso 
+    automaticamente e gera problemas de distorção do objeto.
 
         * Ex: Uma imagem 100x50, passada pra 25x25, vai ter o objeto descaracterizado.
 
