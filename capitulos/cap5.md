@@ -36,3 +36,16 @@ A criação de um classficador usando o HaarCascade pode ser descrita em um conj
 
 ### 1 - Escolher o objeto.
 
+O primeiro passo é escolher o objeto que será identificado, para isso você deverá pensar nos seguintes aspectos:
+
+    * Serão objetos rígidos como uma logo (nike) ou com variações (cadeira,copo)?
+
+    * Objetos rigidos são mais eficientes e mais rápidos.
+
+    * Ao treinar muitas variações pode ser que o classificador fique fraco, portanto, fique atento a isso.
+
+    * Objetos que a cor é fundamental não são recomendados, pois as imagens serão passadas para a escala de cinza.
+
+Para esse projeto, escolhi o objeto faca para ser detectado.
+
+### 2 - Selecionar imagens negativas.
