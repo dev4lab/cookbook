@@ -152,8 +152,7 @@ Exemplos de imagens positivas que irei usar para o treinamento do classificador:
 OBS: Todas essas imagens tem dimensões 100x50, essa informação será importante para explicações futuras.
 
 Aqui temos o pulo do gato, é possível criar mais imagens positivas a partir das imagens que você já tem, para isso basta abrir o CMD, entrar na pasta onde estão suas imagens positivas e digitar esse comando:
-
-‘’’
+‘’’ruby
 
 opencv_createsamples -img faca_1.png -bg negativas/bg.txt -info positivas/positivas.lst -maxxangle 0.5 -maxyangle 0.5 -maxzangle 0.5 -num 1800 -bgcolor 255 -bgthresh 10
 
@@ -184,5 +183,3 @@ Parâmetros:
     </p>
     <p> <b>bgtresh 100</b>  </p>
 </div>
-
-
