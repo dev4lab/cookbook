@@ -93,13 +93,8 @@ OBS: Todas essas imagens tem dimensões 100x100, essa informação será importa
 
 Aqui é importante mencionar que você deve criar uma pasta (ex: projeto) onde estará outra pasta com as imagens negativas, na pasta projeto também deve estar as imagens positivas.
 Na pasta das imagens negativas você deve colocar esse arquivo:
-<div align="center">
-    <p align="center">
-    <img src="../imagens/cap2/criar_lista.bat" width="100" height="100"/>
-    </p>
-    <p> <b>Figura 3</b>  </p>
-</div>
-E deve executá-lo ao final da escolha das imagens negativas, pois ele vai gerar uma lista com as imagens negativas.
+
+https://github.com/luis131313/cookbook/blob/master/imagens/cap2/criar_lista.bat
 
 Ex:
 
