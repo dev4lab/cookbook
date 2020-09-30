@@ -174,7 +174,7 @@ Parâmetros:
 
 -img = Nome da imagem base.
 
--bg = Diretório / nome do arquivo com as informações das imagens negativas.
+-bg = Nome da pastas / nome do arquivo .txt com as informações das imagens negativas.
 
 -info = Nome da pasta / Nome do arquivo .lst (sempre altere esse parâmetro quando usar uma nova imagem (Ex: positivas2/positivas2.lst, positivas3/positivas3.lst))
 
