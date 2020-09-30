@@ -95,3 +95,7 @@ Ex:
     </p>
     <p> <b>Figura 4</b>  </p>
 </div>
+
+OBS: Todas essas imagens tem dimensões 100x100, essa informação será importante para futuras explicações.
+
+### 3 -Selecionar imagens positivas.
