@@ -69,35 +69,28 @@ Ex:
 
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap2/1920.jpg" width="200" height="200"/>
+    <img src="../imagens/cap2/86.jpg" width="100" height="100"/>
     </p>
     <p> <b>Figura 1</b>  </p>
 </div>
 
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap2/2833.jpg" width="200" height="200"/>
+    <img src="../imagens/cap2/2833.jpg" width="100" height="100"/>
     </p>
     <p> <b>Figura 2</b>  </p>
 </div>
 
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap2/43.jpg" width="200" height="200"/>
+    <img src="../imagens/cap2/43.jpg" width="100" height="100"/>
     </p>
     <p> <b>Figura 3</b>  </p>
 </div>
 
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap2/3654.jpg" width="200" height="200"/>
+    <img src="../imagens/cap2/3654.jpg" width="100" height="100"/>
     </p>
     <p> <b>Figura 4</b>  </p>
-</div>
-
-<div align="center">
-    <p align="center">
-    <img src="../imagens/cap2/86.jpg" width="200" height="200"/>
-    </p>
-    <p> <b>Figura 5</b>  </p>
 </div>
