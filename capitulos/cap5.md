@@ -89,13 +89,6 @@ Ex:
     <p> <b>Figura 3</b>  </p>
 </div>
 
-<div align="center">
-    <p align="center">
-    <img src="../imagens/cap2/3654.jpg" width="100" height="100"/>
-    </p>
-    <p> <b>Figura 4</b>  </p>
-</div>
-
 OBS: Todas essas imagens tem dimensões 100x100, essa informação será importante para futuras explicações.
 
 ### 3 -Selecionar imagens positivas.
