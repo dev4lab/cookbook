@@ -92,11 +92,6 @@ Ex:
 OBS: Todas essas imagens tem dimensões 100x100, essa informação será importante para futuras explicações.
 
 Aqui é importante mencionar que você deve criar uma pasta (ex: projeto) onde estará outra pasta com as imagens negativas, na pasta projeto também deve estar as imagens positivas.
-Na pasta das imagens negativas você deve colocar esse arquivo:
-
-https://github.com/luis131313/cookbook/blob/master/imagens/cap2/criar_lista.bat
-
-E deve executá-lo ao final da escolha das imagens negativas, pois ele vai gerar uma lista com as imagens negativas.
 
 Ex:
 
@@ -106,6 +101,12 @@ Ex:
     </p>
     <p> <b>Figura 3</b>  </p>
 </div>
+
+Na pasta das imagens negativas você deve colocar esse arquivo:
+
+https://github.com/luis131313/cookbook/blob/master/imagens/cap2/criar_lista.bat
+
+E deve executá-lo ao final da escolha das imagens negativas, pois ele vai gerar uma lista com as imagens negativas.
 
 ### 3 -Selecionar imagens positivas.
 
