@@ -96,6 +96,8 @@ Na pasta das imagens negativas você deve colocar esse arquivo:
 
 https://github.com/luis131313/cookbook/blob/master/imagens/cap2/criar_lista.bat
 
+E deve executá-lo ao final da escolha das imagens negativas, pois ele vai gerar uma lista com as imagens negativas.
+
 Ex:
 
 <div align="center">
