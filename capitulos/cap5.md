@@ -197,3 +197,16 @@ Parâmetros:
     </p>
     <p> <b>bgtresh 100</b>  </p>
 </div>
+
+Como resultado você tera a quantidade de imagens mencionada em uma pasta de acordo com o nome que você escolheu e um arquivo .lst que terá informações sobre essas imagens, esse arquivo é de extrema importância e é apartir dele que iremos criar o vetor de imagens.
+
+Nesse caso, usei 10 imagens e criei um total de 3000 imagens apartir desse comando, logo, você terá as pastas positivas1, positivas2 e etc...
+
+Ex:
+
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap2/2.jpg" width="1000" height="200"/>
+    </p>
+    <p> <b>Pasta</b>  </p>
+</div>
