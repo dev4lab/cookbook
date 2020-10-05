@@ -361,7 +361,8 @@ Agora irei apresentar um código que irá realizar a detecção de facas.
 
 Para isso baixe esse classificador que eu criei, ele ainda não está pronto, logo não irá apresentar resultados excelentes.
 
-Link
+https://github.com/luis131313/cookbook/blob/master/imagens/cap2/cascade_facas.xml
+
 ‘’’
 
 import cv2
@@ -372,7 +373,7 @@ imagem1 = 'teste1.png'
 
 #variável que armazena o arquivo xml
 
-cascade_path1 = 'cascade.xml' 
+cascade_path1 = 'cascade_facas.xml' 
 
 #cria o classificador
 
