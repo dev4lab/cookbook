@@ -428,7 +428,7 @@ Vários dos arquivos apresentados foram cedidos pela www.iaexpert.academy, agrad
 
 Fiz esse tutorial com muito carinho e espero que seja útil para você, a intenção aqui foi realizar um pequeno projeto usando o método HaarCascade, ainda existe muito há aprender sobre esse método, mas a minha intenção era introduzir esse assunto.
 
-Desejo bons estudos ou bons trabalhos,
+Desejo bons estudos e bons trabalhos,
 
 Atenciosamente,
 
