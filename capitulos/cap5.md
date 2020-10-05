@@ -283,7 +283,7 @@ Dessa maneira:
 
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap2/negativas1.png" width="807" height="323"/>
+    <img src="../imagens/cap2/negativas3.png" width="807" height="323"/>
     </p>
     <p> <b> Pasta “classificador”</b> </p>
 </div>
@@ -309,21 +309,21 @@ opencv_traincascade -data classificador -vec vetor_final.vec -bg bg.txt -numPos 
 
 Parâmetros
 
--data = Nome da pasta que os arquivos de treinamento serão armazenados
+-data = Nome da pasta que os arquivos de treinamento serão armazenados.
 
--vec = Nome do vetor
+-vec = Nome do vetor.
 
--bg = informações das imagens negativas
+-bg = informações das imagens negativas.
 
--numPos = Número de imagens positivas
+-numPos = Número de imagens positivas.
 
--numNeg = Número de imagens negativas
+-numNeg = Número de imagens negativas.
 
--numStages = Número de estágios
+-numStages = Número de estágios.
 
--w e -h = dimensões das imagens
+-w e -h = dimensões das imagens.
 
--precalcBufSize e -precalcIdxBufSize = memória utilizada para o treinamento
+-precalcBufSize e -precalcIdxBufSize = memória utilizada para o treinamento.
 
 Após o treinamento, na pasta classificador você terá esses arquivos:
 
@@ -338,4 +338,4 @@ O arquivo cascade.xml é o nosso classificador.
 
 O arquivo params.xml são os parâmetros usados no treinamento.
 
-E os outros arquivos, são os resultados 
+E os outros arquivos, são os resultados de cada estágio do treinamento.
