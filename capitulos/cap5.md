@@ -269,3 +269,73 @@ Nesse momento a pasta do seu projeto estará assim:
     </p>
     <p> <b> Pasta “Projeto”</b> </p>
 </div>
+
+## 5 - Treinar o classificador
+
+Para o passo final, você deve primeiramente baixar esses arquivos:
+
+https://github.com/luis131313/cookbook/blob/master/imagens/cap2/opencv_traincascade.exe
+Aqui vem o arquivo .dll (colocar quando conseguir subir ele).
+
+Após isso, você deve abrir a pasta negativas e colocar esses dois arquivos mais o vetor final nela e criar uma pasta chamada “classificador”.
+
+Dessa maneira:
+
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap2/negativas1.png" width="807" height="323"/>
+    </p>
+    <p> <b> Pasta “classificador”</b> </p>
+</div>
+
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap2/negativas2.png" width="807" height="323"/>
+    </p>
+    <p> <b> Arquivos</b> </p>
+</div>
+
+Após isso, abra o CMD na pasta negativas e digite o seguinte comando:
+
+.
+
+.
+
+opencv_traincascade -data classificador -vec vetor_final.vec -bg bg.txt -numPos 2400 -numNeg 1200 -numStages 15 -w 30 -h 15 -precalcBufSize 1024 -precalcIdxBufSize 1024
+
+.
+
+.
+
+Parâmetros
+
+-data = Nome da pasta que os arquivos de treinamento serão armazenados
+
+-vec = Nome do vetor
+
+-bg = informações das imagens negativas
+
+-numPos = Número de imagens positivas
+
+-numNeg = Número de imagens negativas
+
+-numStages = Número de estágios
+
+-w e -h = dimensões das imagens
+
+-precalcBufSize e -precalcIdxBufSize = memória utilizada para o treinamento
+
+Após o treinamento, na pasta classificador você terá esses arquivos:
+
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap2/cascade.png" width="798" height="217"/>
+    </p>
+    <p> <b> Arquivos</b> </p>
+</div>
+
+O arquivo cascade.xml é o nosso classificador.
+
+O arquivo params.xml são os parâmetros usados no treinamento.
+
+E os outros arquivos, são os resultados 
