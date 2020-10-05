@@ -341,17 +341,19 @@ O arquivo params.xml são os parâmetros usados no treinamento.
 E os outros arquivos, são os resultados de cada estágio do treinamento.
 
 Sobre o uso do parâmetros
+
 * É indicado que você use metade do número de imagens positivas para as negativas no primeiro treinamento.
 
 * Alguns estudos sugerem que um bom classificador deve ter no mínimo 5000 imagens positivas.
 
-	* Após o primeiro treinamento, se você notar que está tendo muitos falsos positivos, aumente o número de imagens negativas, se notar que não está realizando a detecção, aumente o número de imagens negativas.
+* Após o primeiro treinamento, se você notar que está tendo muitos falsos positivos, aumente o número de imagens negativas, se notar que não está realizando a detecção, aumente o número de imagens negativas.
 
-	* Para melhorar os resultados você também pode aumentar o número de estágios.
+* Para melhorar os resultados você também pode aumentar o número de estágios.
 
-	*  Não se esqueça que a soma dos parâmetros -precalcBufSize e -precalcIdxBufSize não pode ser maior que a memória disponível.
+* Não se esqueça que a soma dos parâmetros -precalcBufSize e -precalcIdxBufSize não pode ser maior que a memória disponível.
 
-	* Quanto mais imagens negativas, positivas, estágios de treinamento e dimensão das imagens, mais o treinamento vai demorar, podendo fazer o treinamento durar até meses.
+* Quanto mais imagens negativas, positivas, estágios de treinamento e dimensão das imagens, mais o treinamento vai demorar, podendo fazer o treinamento durar até meses.
+
 
 ## Código para detecção
 
