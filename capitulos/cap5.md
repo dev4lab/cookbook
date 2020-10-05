@@ -265,7 +265,7 @@ Nesse momento a pasta do seu projeto estará assim:
 
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap2/projeto.png" width="400" height="200"/>
+    <img src="../imagens/cap2/projeto.png" width="807" height="323"/>
     </p>
     <p> <b>bgtresh 100</b> Pasta “Projeto” </p>
 </div>
