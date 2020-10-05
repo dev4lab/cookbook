@@ -410,3 +410,26 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 ‘’’
+
+Ao executar o código com um exemplo, teremos essa detecção:
+
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap2/resultado.png" width="1193" height="667"/>
+    </p>
+    <p> <b> Imagem retirada do Google</b> </p>
+</div>
+
+Podemos notar alguns falsos positivos, o que indica que seria interessante realizar um novo treinamento com mais imagens negativas.
+
+## Considerações finais
+
+Vários de nossos arquivos apresentados para vocês foram retirados de www.iaexpert.academy .
+
+Fiz esse tutorial com muito carinho e espero que seja útil para você, a intenção aqui foi realizar um pequeno projeto usando o método HaarCascade, ainda existe muito há aprender sobre esse método, mas a minha intenção era introduzir esse assunto.
+
+Desejo bons estudos ou bom trabalho,
+
+Atenciosamente,
+
+Luis Fernando Santos Ferreira, Aluno do curso de Ciência da Computação na Universidade Federal de Lavras. 
