@@ -339,3 +339,60 @@ O arquivo cascade.xml é o nosso classificador.
 O arquivo params.xml são os parâmetros usados no treinamento.
 
 E os outros arquivos, são os resultados de cada estágio do treinamento.
+
+Sobre o uso do parâmetros
+* É indicado que você use metade do número de imagens positivas para as negativas no primeiro treinamento.
+
+* Alguns estudos sugerem que um bom classificador deve ter no mínimo 5000 imagens positivas.
+
+	* Após o primeiro treinamento, se você notar que está tendo muitos falsos positivos, aumente o número de imagens negativas, se notar que não está realizando a detecção, aumente o número de imagens negativas.
+
+	* Para melhorar os resultados você também pode aumentar o número de estágios.
+
+	*  Não se esqueça que a soma dos parâmetros -precalcBufSize e -precalcIdxBufSize não pode ser maior que a memória disponível.
+
+	* Quanto mais imagens negativas, positivas, estágios de treinamento e dimensão das imagens, mais o treinamento vai demorar, podendo fazer o treinamento durar até meses.
+
+## Código para detecção
+
+Agora irei apresentar um código que irá realizar a detecção de facas.
+
+Para isso baixe esse classificador que eu criei, ele ainda não está pronto, logo não irá apresentar resultados excelentes.
+
+Link
+
+‘’’
+
+import cv2
+
+#variável que armazena a imagem
+imagem1 = 'teste1.png'
+
+#variável que armazena o arquivo xml
+cascade_path1 = 'cascade.xml' 
+
+#cria o classificador
+clf1 = cv2.CascadeClassifier(cascade_path1)
+
+#le a imagem
+img1 = cv2.imread(imagem1)
+
+#converte para cinza
+gray1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
+
+#Função da detecção
+deteccoes1 = clf1.detectMultiScale(gray1, scaleFactor=1.01, minNeighbors=5, minSize=(1,1))
+
+#desenha o retangulo com as cordenadas obtidas
+for(x,y,w,h) in deteccoes1:
+    img1 = cv2.rectangle(img1, (x,y), (x+w, y+h), (0,0,255), 2)
+
+#para vizualizar a imagem
+cv2.imshow('Classificador 1', img1)
+
+#mantem a janela aberta até que eu digite uma tecla
+cv2.waitKey(0)
+#destroi a janela
+cv2.destroyAllWindows()
+
+‘’’
