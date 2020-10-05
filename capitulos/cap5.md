@@ -29,8 +29,7 @@ A criação de um classficador usando o HaarCascade pode ser descrita em um conj
 3 - Selecionar imagens positivas.
 
 
-4 - Gerar um vetor de positivas.
-
+4 - Gerar o vetor de positivas.
 
 5 - Treinar o classificador.
 
@@ -215,3 +214,26 @@ Ex:
     </p>
     <p> <b>Pasta</b>  </p>
 </div>
+
+## 4 - Gerar o vetor de positivas.
+
+Aqui você deverá criar um vetor para cada pasta com as imagens positiva (positivas1, positivas2, etc...) e depois juntar esses vetores em apenas um vetor.
+Para isso, digite esse comando no CMD:
+
+.
+
+.
+
+opencv_createsamples -info positivas1/positivas1.lst -num 2000 -w 50 -h 25 -vec vetor1.vec
+
+.
+
+.
+
+Parâmetros
+
+-info = Nome da pasta que contém as imagens / arquivo .lst (Como criamos 3000 imagens a partir de 10 imagens, temos 10 pastas com 300 imagens cada, logo, teremos que repetir esse comando 10 vezes, alterando o nome da pasta e do arquivo .lst, para positivas2 / positivas2.lst, etc...)
+
+- w e -h = são as dimensõe, como nossas imagens eram 100 x 50, eu reduzi para 50 x 25, para reduzir o tamanho do arquivo, até porque para treinar o classificador com as iamgens em 100 x 50 eu deveria ter um super computador.
+
+- vec = Nome do vetor (Aqui você também tem que alterar, colocando vetor1, vetor2, etc...).
