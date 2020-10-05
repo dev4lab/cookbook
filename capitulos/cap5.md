@@ -360,7 +360,6 @@ Agora irei apresentar um código que irá realizar a detecção de facas.
 Para isso baixe esse classificador que eu criei, ele ainda não está pronto, logo não irá apresentar resultados excelentes.
 
 Link
-
 ‘’’
 
 import cv2
@@ -402,6 +401,7 @@ cv2.imshow('Classificador 1', img1)
 #mantem a janela aberta até que eu digite uma tecla
 
 cv2.waitKey(0)
+
 #destroi a janela
 
 cv2.destroyAllWindows()
