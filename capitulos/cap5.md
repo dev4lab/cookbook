@@ -31,7 +31,9 @@ A criação de um classficador usando o HaarCascade pode ser descrita em um conj
 
 4 - Gerar o vetor de positivas.
 
+
 5 - Treinar o classificador.
+
 
 ### 1 - Escolher o objeto.
 
@@ -237,3 +239,34 @@ Parâmetros
 - w e -h = são as dimensõe, como nossas imagens eram 100 x 50, eu reduzi para 50 x 25, para reduzir o tamanho do arquivo, até porque para treinar o classificador com as iamgens em 100 x 50 eu deveria ter um super computador.
 
 - vec = Nome do vetor (Aqui você também tem que alterar, colocando vetor1, vetor2, etc...).
+
+Após isso, devemos unir todos esses vetores em apenas um, para isso crie uma pasta chamada "vec" e coloque todos os vetores nela.
+
+Depois baixe esse arquivo:
+
+https://github.com/luis131313/cookbook/blob/master/imagens/cap2/mergevec.py
+
+e coloque ele na pasta do seu projeto.
+
+após isso, digite no CMD:
+
+.
+
+.
+
+python mergevec.py -v vec/ -o vetor_final.vec
+
+.
+
+.
+
+Após a conclusão você terá um arquivo chamado vetor_final.vec, que é o vetor que iremos utilizar.
+Nesse momento a pasta do seu projeto estará assim:
+
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap2/projeto.jpg" width="400" height="300"/>
+    </p>
+    <p> <b>bgtresh 100</b> Pasta “Projeto” </p>
+</div>
+
