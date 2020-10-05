@@ -424,7 +424,7 @@ Podemos notar alguns falsos positivos, o que indica que seria interessante reali
 
 ## Considerações finais
 
-Vários dos arquivos apresentados foram cedidos pela www.iaexpert.academy, agradeço imensamente a vocês pela disponibilidade.
+Vários dos arquivos apresentados foram cedidos pela www.iaexpert.academy, agradeço imensamente pela disponibilidade.
 
 Fiz esse tutorial com muito carinho e espero que seja útil para você, a intenção aqui foi realizar um pequeno projeto usando o método HaarCascade, ainda existe muito há aprender sobre esse método, mas a minha intenção era introduzir esse assunto.
 
