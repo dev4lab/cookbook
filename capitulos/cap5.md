@@ -363,7 +363,7 @@ Para isso baixe esse classificador que eu criei, ele ainda não está pronto, lo
 
 https://github.com/luis131313/cookbook/blob/master/imagens/cap2/cascade_facas.xml
 
-‘’’
+```python
 
 import cv2
 
@@ -409,7 +409,7 @@ cv2.waitKey(0)
 
 cv2.destroyAllWindows()
 
-‘’’
+```
 
 Ao executar o código com um exemplo, teremos essa detecção:
 
