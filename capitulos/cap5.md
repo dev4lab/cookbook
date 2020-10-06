@@ -259,7 +259,7 @@ Para o passo final, você deve primeiramente baixar esses arquivos:
 
 https://github.com/luis131313/cookbook/blob/master/imagens/cap2/opencv_traincascade.exe
 
-Aqui vem o arquivo .dll (colocar quando conseguir subir ele).
+https://mega.nz/file/09YnVKQb#LdE1iz05i9OeoMqoZtuC3lVn4teeA7gqozVS-N1hG2U
 
 Após isso, você deve abrir a pasta negativas e colocar esses dois arquivos e o vetor final nela, e criar uma pasta chamada “classificador”.
 
