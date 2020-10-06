@@ -62,12 +62,12 @@ Para selecionar as imagens negativas, você deve ficar atento aos seguintes aspe
         *Ex: Objeto = carro
          Usar imagens de asfalto e ruas vazias.
 
-Logo, você deve ficar atento as iamgens escolhidas, pois como dito elas podem ser qualquer coisa, exceto o objeto escolhido, como escolhemos facas como objeto de detecção devemos, iremos precisar de imagens que não tenham facas.
+Logo, você deve ficar atento as imagens escolhidas, pois como dito elas podem ser qualquer coisa, exceto o objeto escolhido, como escolhemos facas como objeto de detecção devemos, iremos precisar de imagens que não tenham facas.
 
 Quantas imagens negativas?
 É relativo, para esse projeto eu conto com 3000 imagens negativas, com diversas variações de fundo. Entretanto, isso vai depender dos resultados obtidos no treinamento, pode ser que eu precise de mais imagens ou não, isso será explicado mais a frente com mais detalhes.
 
-Ex:
+Exemplos de imagens negativas:
 
 <div align="center">
     <p align="center">
@@ -94,13 +94,13 @@ OBS: Todas essas imagens tem dimensões 100x100, essa informação será importa
 
 Aqui é importante mencionar que você deve criar uma pasta (ex: projeto) onde estará outra pasta com as imagens negativas, na pasta projeto também deve estar as imagens positivas.
 
-Ex:
+Exemplo:
 
 <div align="center">
     <p align="center">
     <img src="../imagens/cap2/1.jpg" width="1000" height="200"/>
     </p>
-    <p> <b>Figura 3</b>  </p>
+    <p> <b>Pasta</b>  </p>
 </div>
 
 Na pasta das imagens negativas você deve colocar esse arquivo:
@@ -128,7 +128,7 @@ Para selecionar as imagens positivas, você deve ficar atento aos seguintes aspe
 
     * Sempre que possível usar imagens com fundo branco.
 
-Como dito no primeiro passo, você deve tomar cuidado com as variações do objeto, caso você queira realizar a detecção de um objeto em diferentes ângulos é sugerido que você faça diferentes classificadores. Para exemplificar isso, cito o classificador haarcascade frontalface, que realiza a detecção frontal da face (esse classificador inclusive é de fácil acesso, até a openCV disponibiliza ele pra você) e caso você queira a detecção lateral da face, você deve usar outro classificador, esses cuidados devem ser tomados para que você tenha um bom classificador.
+Como dito no primeiro passo, você deve tomar cuidado com as variações do objeto, caso você queira realizar a detecção de um objeto em diferentes ângulos é sugerido que você faça diferentes classificadores. Para exemplificar isso, cito o classificador haarcascade frontal face, que realiza a detecção frontal da face (esse classificador inclusive é de fácil acesso, até a openCV disponibiliza ele pra você) e caso você queira a detecção lateral da face, você deve usar outro classificador, esses cuidados devem ser tomados para que você tenha um bom classificador.
 
 Em relação a quantidade, alguns estudos sugerem que um bom classificador deve ter no mínimo 5000 mil imagens como entrada para o treinamento.
 
@@ -165,15 +165,9 @@ https://github.com/luis131313/cookbook/blob/master/imagens/cap2/opencv_createsam
 
 Coloque ele junto com as imagens positivas, depois basta abrir o CMD, entrar na pasta onde estão suas imagens positivas e digitar esse comando:
 
-.
-
-.
-
+```
 opencv_createsamples -img faca_1.png -bg negativas/bg.txt -info positivas/positivas.lst -maxxangle 0.5 -maxyangle 0.5 -maxzangle 0.5 -num 300 -bgcolor 255 -bgthresh 10
-
-.
-
-.
+```
 
 Parâmetros:
 
@@ -204,9 +198,9 @@ Parâmetros:
     <p> <b>bgtresh 100</b>  </p>
 </div>
 
-Como resultado você tera a quantidade de imagens mencionada em uma pasta de acordo com o nome que você escolheu e um arquivo .lst que terá informações sobre essas imagens, esse arquivo é de extrema importância e é apartir dele que iremos criar o vetor de imagens.
+Como resultado você terá a quantidade de imagens mencionada em uma pasta de acordo com o nome que você escolheu e um arquivo .lst que terá informações sobre essas imagens, esse arquivo é de extrema importância e é a partir dele que iremos criar o vetor de imagens.
 
-Nesse caso, usei 10 imagens e criei um total de 3000 imagens apartir desse comando, logo, você terá as pastas positivas1, positivas2 e etc...
+Nesse caso, usei 10 imagens e criei um total de 3000 imagens a partir desse comando, logo, você terá as pastas positivas1, positivas2 e etc...
 
 Ex:
 
@@ -222,21 +216,15 @@ Ex:
 Aqui você deverá criar um vetor para cada pasta com as imagens positiva (positivas1, positivas2, etc...) e depois juntar esses vetores em apenas um vetor.
 Para isso, digite esse comando no CMD:
 
-.
-
-.
-
+```
 opencv_createsamples -info positivas1/positivas1.lst -num 2000 -w 50 -h 25 -vec vetor1.vec
-
-.
-
-.
+```
 
 Parâmetros
 
--info = Nome da pasta que contém as imagens / arquivo .lst (Como criamos 3000 imagens a partir de 10 imagens, temos 10 pastas com 300 imagens cada, logo, teremos que repetir esse comando 10 vezes, alterando o nome da pasta e do arquivo .lst, para positivas2 / positivas2.lst, etc...)
+-info = Nome da pasta que contém as imagens / arquivo .lst (Como criamos 3000 imagens a partir de 10 imagens, temos 10 pastas com 300 imagens cada, logo, teremos que repetir esse comando 10 vezes, alterando o nome da pasta e do arquivo .lst, para positivas2 / positivas2.lst, etc...).
 
-- w e -h = são as dimensõe, como nossas imagens eram 100 x 50, eu reduzi para 50 x 25, para reduzir o tamanho do arquivo, até porque para treinar o classificador com as iamgens em 100 x 50 eu deveria ter um super computador.
+- w e -h = são as dimensões, como nossas imagens eram 100 x 50, eu reduzi para 50 x 25, para reduzir o tamanho do arquivo, até porque para treinar o classificador com as imagens em 100 x 50 eu deveria ter um super computador.
 
 - vec = Nome do vetor (Aqui você também tem que alterar, colocando vetor1, vetor2, etc...).
 
@@ -250,17 +238,12 @@ e coloque ele na pasta do seu projeto.
 
 após isso, digite no CMD:
 
-.
-
-.
-
+```
 python mergevec.py -v vec/ -o vetor_final.vec
-
-.
-
-.
+```
 
 Após a conclusão você terá um arquivo chamado vetor_final.vec, que é o vetor que iremos utilizar.
+
 Nesse momento a pasta do seu projeto estará assim:
 
 <div align="center">
@@ -275,9 +258,10 @@ Nesse momento a pasta do seu projeto estará assim:
 Para o passo final, você deve primeiramente baixar esses arquivos:
 
 https://github.com/luis131313/cookbook/blob/master/imagens/cap2/opencv_traincascade.exe
+
 Aqui vem o arquivo .dll (colocar quando conseguir subir ele).
 
-Após isso, você deve abrir a pasta negativas e colocar esses dois arquivos mais o vetor final nela e criar uma pasta chamada “classificador”.
+Após isso, você deve abrir a pasta negativas e colocar esses dois arquivos e o vetor final nela, e criar uma pasta chamada “classificador”.
 
 Dessa maneira:
 
@@ -297,15 +281,9 @@ Dessa maneira:
 
 Após isso, abra o CMD na pasta negativas e digite o seguinte comando:
 
-.
-
-.
-
+```
 opencv_traincascade -data classificador -vec vetor_final.vec -bg bg.txt -numPos 2400 -numNeg 1200 -numStages 15 -w 30 -h 15 -precalcBufSize 1024 -precalcIdxBufSize 1024
-
-.
-
-.
+```
 
 Parâmetros
 
@@ -340,13 +318,13 @@ O arquivo params.xml são os parâmetros usados no treinamento.
 
 E os outros arquivos, são os resultados de cada estágio do treinamento.
 
-Sobre o uso do parâmetros
+Sobre o uso dos parâmetros:
 
 * É indicado que você use metade do número de imagens positivas para as negativas no primeiro treinamento.
 
 * Alguns estudos sugerem que um bom classificador deve ter no mínimo 5000 imagens positivas.
 
-* Após o primeiro treinamento, se você notar que está tendo muitos falsos positivos, aumente o número de imagens negativas, se notar que não está realizando a detecção, aumente o número de imagens negativas.
+* Após o primeiro treinamento, se você notar que está tendo muitos falsos positivos, aumente o número de imagens negativas, se notar que não está realizando a detecção, aumente o número de imagens negativas, faça novos treinamentos até ter bons resultados.
 
 * Para melhorar os resultados você também pode aumentar o número de estágios.
 
@@ -379,7 +357,7 @@ cascade_path1 = 'cascade_facas.xml'
 
 clf1 = cv2.CascadeClassifier(cascade_path1)
 
-#le a imagem
+#lê a imagem
 
 
 img1 = cv2.imread(imagem1)
@@ -392,20 +370,20 @@ gray1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
 
 deteccoes1 = clf1.detectMultiScale(gray1, scaleFactor=1.01, minNeighbors=5, minSize=(1,1))
 
-#desenha o retangulo com as cordenadas obtidas
+#desenha o retângulo com as coordenadas obtidas
 
 for(x,y,w,h) in deteccoes1:
     img1 = cv2.rectangle(img1, (x,y), (x+w, y+h), (0,0,255), 2)
 
-#para vizualizar a imagem
+#para visualizar a imagem
 
 cv2.imshow('Classificador 1', img1)
 
-#mantem a janela aberta até que eu digite uma tecla
+#mantém a janela aberta até que eu digite uma tecla
 
 cv2.waitKey(0)
 
-#destroi a janela
+#destrói a janela
 
 cv2.destroyAllWindows()
 
@@ -424,12 +402,12 @@ Podemos notar alguns falsos positivos, o que indica que seria interessante reali
 
 ## Considerações finais
 
-Vários dos arquivos apresentados foram cedidos pela www.iaexpert.academy, agradeço imensamente pela disponibilidade.
+Vários dos arquivos apresentados foram cedidos pela www.iaexpert.academy, agradeço imensamente pela generosidade.
 
-Fiz esse tutorial com muito carinho e espero que seja útil para você, a intenção aqui foi realizar um pequeno projeto usando o método HaarCascade, ainda existe muito há aprender sobre esse método, mas a minha intenção era introduzir esse assunto.
+Fiz esse tutorial com muito carinho e espero que seja útil para você, a intenção aqui foi realizar um pequeno projeto usando o método HaarCascade, ainda existe muito há aprender sobre esse método, mas a minha intenção é apenas introduzir esse assunto.
 
 Desejo bons estudos e bons trabalhos.
 
 Atenciosamente,
 
-Luis Fernando Santos Ferreira, Aluno do curso de Ciência da Computação na Universidade Federal de Lavras. 
+Luis Fernando Santos Ferreira, Aluno do curso de Ciência da Computação na Universidade Federal de Lavras
