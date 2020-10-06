@@ -410,4 +410,4 @@ Desejo bons estudos e bons trabalhos.
 
 Atenciosamente,
 
-Luis Fernando Santos Ferreira, Aluno do curso de Ciência da Computação na Universidade Federal de Lavras
+Luis Fernando Santos Ferreira, Aluno do curso de Ciência da Computação na Universidade Federal de Lavras.
