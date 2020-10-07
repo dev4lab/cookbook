@@ -36,7 +36,7 @@ from sklearn.preprocessing import StandardScaler
 
 ### Download da imagem
 
-'''python
+```python
 def url_to_image(url):
     resp = urllib.request.urlopen(url)
     image = np.asarray(bytearray(resp.read()), dtype="uint8")
@@ -47,4 +47,4 @@ def url_to_image(url):
 url = f'https://i.imgur.com/PLGlnWj.png'
 
 img = url_to_image(url)
-'''
+```
