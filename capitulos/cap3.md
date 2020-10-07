@@ -4,15 +4,17 @@ Nesse capítulo você irá aprender uma maneira rápida e fácil de utilizar Mac
 
 Nesse contexto, iremos utilizar o método DBSCAN da Lib SKLEARN para reorganizar os pontos das cores selecionadas e identificar áreas de baixa densidade.
 
+Os códigos contidos neste capítulo foram foram desenvolvidos para serem rodados no Google Colab e pode sofrer algumas alterações para rodar fora do Colab (exemplo: a utilização da lib google.colab.patches para visualizar imagens).
+
 ## Preparando o ambiente
 
 Para esse projeto é necessário que você tenha instalado os seguintes itens em sua máquina.
 
 1 - Editor de textos de sua preferência.
 
-2 - Python 3.8.5
+2 - Python 3.8.5 .
 
-3 - Bibliotecas (OpenCV, Collections, Sklearn, Numpy)
+3 - Bibliotecas (OpenCV, Collections, Sklearn, Numpy).
 
 Caso queira, pode utilizar o Google Colab que tem o ambiente praticamente pronto.
 
