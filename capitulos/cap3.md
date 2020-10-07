@@ -10,11 +10,11 @@ Nesse contexto, iremos utilizar o método DBSCAN da Lib SKLEARN para reorganizar
 
 Para esse projeto é necessário que você tenha instalado os seguintes itens em sua máquina.
 
-1 - Editor de textos de sua preferência.
+1. Editor de textos de sua preferência.
 
-2 - Python 3.8.5 .
+2. Python 3.8.5 .
 
-3 - Bibliotecas (OpenCV, Collections, Sklearn, Numpy).
+3. Bibliotecas (**OpenCV**, **Collections**, **Sklearn**, **Numpy**).
 
 Caso queira, pode utilizar o Google Colab que tem o ambiente praticamente pronto.
 
