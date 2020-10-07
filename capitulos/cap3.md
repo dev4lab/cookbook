@@ -36,7 +36,7 @@ from sklearn.preprocessing import StandardScaler
 
 ### Download da imagem
 
-**Como estamos utilizando o Google Colab, estaremos realizando o download e conversão das imagens diretamente do IMGUR**
+**Como estamos utilizando o Google Colab, estaremos realizando o download e conversão das imagens diretamente do Imgur.**
 ```python
 def url_to_image(url):
     resp = urllib.request.urlopen(url)
