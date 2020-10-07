@@ -36,6 +36,8 @@ from sklearn.preprocessing import StandardScaler
 
 ### Download da imagem
 
+Baixamos a imagem diretamente da internet utilizando a lib Urlib e após isso, utilizamos as libs Numpy e Opencv para converter a imagem para um formato aceito pela lib OpenCV.
+
 **Obs. Como estamos utilizando o Google Colab, estaremos realizando o download e conversão das imagens diretamente do Imgur.**
 ```python
 def url_to_image(url):
@@ -48,4 +50,13 @@ def url_to_image(url):
 url = f'https://i.imgur.com/PLGlnWj.png'
 
 img = url_to_image(url)
+```
+
+### Seleção do range de cor.
+
+```python
+img = url_to_image(url)
+BLUE_MIN = (110,50,50)
+BLUE_MAX = (130,255,255)
+
 ```
