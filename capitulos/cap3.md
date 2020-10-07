@@ -17,3 +17,17 @@ Para esse projeto é necessário que você tenha instalado os seguintes itens em
 Caso queira, pode utilizar o Google Colab que tem o ambiente praticamente pronto.
 
 ## Passos
+
+### Importar Libs
+
+```
+import numpy as np
+import urllib
+import cv2
+from google.colab.patches import cv2_imshow
+from collections import Counter
+from sklearn.cluster import DBSCAN
+from sklearn import metrics
+from sklearn.datasets import make_blobs
+from sklearn.preprocessing import StandardScaler
+```
