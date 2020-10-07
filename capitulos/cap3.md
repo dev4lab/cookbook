@@ -12,7 +12,7 @@ Para esse projeto é necessário que você tenha instalado os seguintes itens em
 
 2 - Python 3.8.5
 
-3 - Bibliotecas (OpenCV, Collections, Sklearn)
+3 - Bibliotecas (OpenCV, Collections, Sklearn, Numpy)
 
 Caso queira, pode utilizar o Google Colab que tem o ambiente praticamente pronto.
 
