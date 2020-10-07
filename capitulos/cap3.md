@@ -33,3 +33,18 @@ from sklearn import metrics
 from sklearn.datasets import make_blobs
 from sklearn.preprocessing import StandardScaler
 ```
+
+### Download da imagem
+
+'''python
+def url_to_image(url):
+    resp = urllib.request.urlopen(url)
+    image = np.asarray(bytearray(resp.read()), dtype="uint8")
+    image = cv2.imdecode(image, cv2.IMREAD_COLOR)
+    hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+    return hsv
+
+url = f'https://i.imgur.com/PLGlnWj.png'
+
+img = url_to_image(url)
+'''
