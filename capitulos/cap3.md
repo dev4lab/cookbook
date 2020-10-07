@@ -16,3 +16,4 @@ Para esse projeto é necessário que você tenha instalado os seguintes itens em
 
 Caso queira, pode utilizar o Google Colab que tem o ambiente praticamente pronto.
 
+## Passos
