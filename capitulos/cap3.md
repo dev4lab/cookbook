@@ -65,3 +65,17 @@ BLUE_MIN = (110,50,50)
 BLUE_MAX = (130,255,255)
 
 ```
+
+### Separação de pixels
+
+```python
+data_cord = []
+
+height, width, channels = img.shape
+
+for x in range(height): 
+    for y in range(width):
+        r, g, b = img[x,y]
+        if (r,g,b) >= BLUE_MIN and (r,g,b) <= BLUE_MAX:
+            data_cord.append([int(x),int(y)])
+```
