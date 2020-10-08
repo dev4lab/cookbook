@@ -124,3 +124,10 @@ plt.title('Estimated number of clusters: %d' % n_clusters_)
 plt.show()
 ```
 ![image info](../imagens/cap3/hhahue.png)
+
+## Identificar maior cluster
+
+```python
+dict_data = dict(Counter(labels))
+template_max = max(dict_data, key=dict_data.get)
+```
