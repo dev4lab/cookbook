@@ -156,6 +156,6 @@ cv2_imshow(img)
 
 
 
-
->**Atenciosamente**</br>
->Willian Jesus da Silva, Aluno do curso de Ciência da Computação no Instituto de ensino superior da Grande Florianópolis.
+***
+**Atenciosamente**</br>
+Willian Jesus da Silva, Aluno do curso de Ciência da Computação no Instituto de ensino superior da Grande Florianópolis.
