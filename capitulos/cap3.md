@@ -4,7 +4,7 @@ Nesse capítulo você irá aprender uma maneira rápida e fácil de utilizar Mac
 
 Nesse contexto, iremos utilizar o método DBSCAN da Lib SKLEARN para reorganizar os pontos das cores selecionadas e identificar áreas de baixa densidade.
 
-**Obs. Os códigos contidos neste capítulo foram foram desenvolvidos para serem rodados no Google Colab e pode sofrer algumas alterações para rodar fora do Colab (exemplo: a utilização da lib google.colab.patches para visualizar imagens).**
+**Obs. Os códigos contidos neste capítulo foram desenvolvidos para serem rodados no Google Colab e pode sofrer algumas alterações para rodar fora do Colab (exemplo: a utilização da lib google.colab.patches para visualizar imagens).**
 
 ## Preparando o ambiente
 
