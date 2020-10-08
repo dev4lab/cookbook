@@ -1,8 +1,8 @@
 # Filtro de densidade usando Machine Learning e Clusterização
 
 Nesse capítulo você irá aprender uma maneira rápida e fácil de utilizar Machine learning para remover ruídos em uma captura de objeto utilizando range de cores.
-
-Nesse contexto, iremos utilizar o método DBSCAN da Lib SKLEARN para reorganizar os pontos das cores selecionadas e identificar áreas de baixa densidade.
+Na captura de imagens utilizando cores, um dos grandes problemas encontrados é a remoção do ruído indesejado por  objetos menores ao fundo do cenário.
+Nesse contexto, iremos utilizar o método DBSCAN da Lib SKLEARN para reorganizar os pixels das cores selecionadas e identificar áreas de baixa densidade.
 
 **Obs. Os códigos contidos neste capítulo foram desenvolvidos para serem rodados no Google Colab e pode sofrer algumas alterações para rodar fora do Colab (exemplo: a utilização da lib google.colab.patches para visualizar imagens).**
 
