@@ -68,7 +68,7 @@ BLUE_MAX = (130,255,255)
 
 ### Separação de pixels
 
-Nesta parte do código percorremos todos os pixels da imagem verificando quais encontram-se dentro do range de cores selecionados e guardamos as coordenadas dos azuis dentro do array data_cord
+Nesta parte do código percorremos todos os pixels da imagem, verificamos quais encontram-se dentro do range de cores selecionados e guardamos as coordenadas dos azuis dentro do array data_cord
 
 ```python
 data_cord = []
