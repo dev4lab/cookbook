@@ -81,3 +81,16 @@ for x in range(height):
         if (r,g,b) >= BLUE_MIN and (r,g,b) <= BLUE_MAX:
             data_cord.append([int(x),int(y)])
 ```
+
+### DBSCAN
+
+Agora, com o data_cord já separado, iremos utilizar DBSCAN para clusterizar os dados.
+O DBSCAN é uma algoritmo de machine learning que clusteriza os dados com base em densidade e tamanho de cluster.
+
+```python
+X = StandardScaler().fit_transform(data_cord)
+db = DBSCAN(eps=0.1, min_samples=1).fit(X)
+core_samples_mask = np.zeros_like(db.labels_, dtype=bool)
+core_samples_mask[db.core_sample_indices_] = True
+labels = db.labels_
+```
