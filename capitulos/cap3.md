@@ -153,3 +153,7 @@ for i in range(len(labels)):
 cv2_imshow(img)
 ```
 ![image info](../imagens/cap3/phktwx.png)
+
+## Atenciosamente
+Willian Jesus da Silva, Aluno do curso de Ciência da Computação no Instituto de ensino superior da Grande Florianópolis.
+
