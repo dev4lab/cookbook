@@ -54,7 +54,7 @@ img = url_to_image(url)
 ![image info](../imagens/cap3/PLGlnWj.png)
 
 
-### Seleção do range de cor.
+### Seleção do range de cor
 
 Este é um dos momentos mais demorados e manuais da aplicação, pois teremos que manualmente encontrar o range de cores utilizados no objeto que queremos selecionar.
 No nosso caso é o Azul.
@@ -67,6 +67,8 @@ BLUE_MAX = (130,255,255)
 ```
 
 ### Separação de pixels
+
+Nesta parte do código percorremos todos os pixels da imagem verificando quais encontram-se dentro do range de cores selecionados e guardamos as coordenadas dos azuis dentro do array data_cord
 
 ```python
 data_cord = []
