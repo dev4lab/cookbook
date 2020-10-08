@@ -125,9 +125,31 @@ plt.show()
 ```
 ![image info](../imagens/cap3/hhahue.png)
 
-## Identificar maior cluster
+### Identificar maior cluster
+
+Utilizando o código abaixo, separamos os clusters em dict, verificamos qual o maior e salvamos essa informação em template_max.
 
 ```python
 dict_data = dict(Counter(labels))
 template_max = max(dict_data, key=dict_data.get)
 ```
+
+### Apresentação
+
+No código abaixo, realizamos a varredura dentro de labels e para cada vez que identificamos o maior cluster, pegamos este index e buscamos a mesma posição no data_cord.
+Assim, conseguimos pegar as coordenadas que se encontram no maior cluster e podemos manipular as coordenadas do maior cluster, ignorando o ruído geral da imagem.
+No caso abaixo, estamos pintando de vermelho o maior cluster e pintando de azul os demais(ruídos) apenas para fins demonstrativos.
+
+
+```python
+for i in range(len(labels)):
+    if labels[i] == template_max:
+      x,y = data_cord[i]
+      img[x,y] = (0,0,255)
+    else:
+      x,y = data_cord[i]
+      img[x,y] = (255,0,0)
+
+cv2_imshow(img)
+```
+![image info](../imagens/cap3/phktwx.png)
