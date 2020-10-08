@@ -1,6 +1,6 @@
 # Filtro de densidade usando Machine Learning e Clusterização
 
-Nesse capítulo você irá aprender uma maneira rápida e fácil de utilizar Machine learning para remover ruídos em uma captura de objeto utilizando Range de cores.
+Nesse capítulo você irá aprender uma maneira rápida e fácil de utilizar Machine learning para remover ruídos em uma captura de objeto utilizando range de cores.
 
 Nesse contexto, iremos utilizar o método DBSCAN da Lib SKLEARN para reorganizar os pontos das cores selecionadas e identificar áreas de baixa densidade.
 
@@ -52,7 +52,12 @@ url = f'https://i.imgur.com/PLGlnWj.png'
 img = url_to_image(url)
 ```
 
+
+
 ### Seleção do range de cor.
+
+Este é um dos momentos mais demorados e manuais da aplicação, pois teremos que manualmente encontrar o range de cores utilizados no objeto que queremos selecionar.
+No nosso caso é o Azul.
 
 ```python
 img = url_to_image(url)
