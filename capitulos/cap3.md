@@ -51,7 +51,7 @@ url = f'https://i.imgur.com/PLGlnWj.png'
 
 img = url_to_image(url)
 ```
-
+![image info](../imagens/cap3/PLGlnWj.png)
 
 
 ### Seleção do range de cor.
