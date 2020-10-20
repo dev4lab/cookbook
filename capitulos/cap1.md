@@ -15,6 +15,15 @@ fdasfd
          
 # Algoritmo de Canny
 
-[start](../imagens/cap1/eq_grad.png)
+![start](../imagens/cap1/eq_grad.png)
 
-dfsa
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap1/eq_grad.png" width="250" height="200"/>
+    </p>
+    <p> <b>Figura 1:</b> Gradiente </p>
+</div>
+ds
+
+d
+d
