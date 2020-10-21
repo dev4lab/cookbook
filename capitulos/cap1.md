@@ -15,13 +15,11 @@ fdasfd
          
 # Algoritmo de Canny
 
-![start](../imagens/cap1/eq_grad.png)
 
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap1/eq_grad.png" width="250" height="200"/>
+    <img src="../imagens/cap1/eq_grad.png" width="180" height="35"/>
     </p>
-    <p> <b>Figura 1:</b> Gradiente </p>
 </div>
 ds
 
