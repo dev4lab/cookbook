@@ -38,7 +38,11 @@ fdasfd
 Nós vamos usar uma imagem em escala de cinza para facilitar a copreenção, mas 
 isso pode ser aplicado em uma imagem de cor. Em imagem de cor o calculo tem como base a distância elclidiana dos
 pixels.
-        
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap1/gauss.gif" width="400" height="250"/>
+    </p>
+</div>  
 mostrar como o sobel melhora com bur       
 # Algoritmo de Canny
 convolução de gaus
