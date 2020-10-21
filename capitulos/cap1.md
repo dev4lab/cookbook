@@ -18,7 +18,7 @@ fdasfd
 
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap1/eq_grad.png" width="180" height="35"/>
+    <img src="../imagens/cap1/eq_grad.svg" width="180" height="35"/>
     </p>
 </div>
 ds
