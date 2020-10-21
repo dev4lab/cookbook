@@ -1,27 +1,33 @@
 # Detecção de Bordas
 A detecção de objeto em imagem é um dos problemas bastante discutido em visão computacional,
-existe varios método para detectar um objeto. O método adequado para determinada situação consite naquele que melhor consilia velocidade e acurácia.
+existe varios método para detectar um objeto. O método adequado para determinada situação consite naquele que melhor consilia velocidade e acurácia. esse detecção pode ser ralizada capturando atributos do objeto, as borda pode ser um deles. Por exemplo apartir da captura da borda podemos identificad diversas figuras geométricas como retangulo circulo, linhas e outros.
+
+Nessa capítulo vamos discutir como a base de como um algoritmo de deteção de borda funciona e implementar alguns deles para verificar os resultados. 
 
 
-### O que é uma borda
+### O que é uma borda?
+
 Em uma imagem uma borda á caracteriza por uma variação abrupta entreo os piexels vizinho.
 
 <div align="center">
     <p align="center">
     <img src="../imagens/cap1/img_linha.png" width="400" height="250"/>
-    </p>
+    </p> <p align="center"> <b>Figura 1:</b>  Pista de corrida </p>
 </div>
 
 matematimente uma borda é um gradiente ou seja, uma variação de intensidade.
+
 <div align="center">
     <p align="center">
     <img src="../imagens/cap1/df.png" width="500" height="350"/>
-    </p>
+    </p> <p align="center"> <b>Figura 2: </b> Grafico de linha da selecionada na figura 1. </p>
 </div>
+
 existem vários operadores para detecção de bordas,, Sobel, Robinson
 baseado em operações de convoluções simples.
 
 Encontrar contornos em imagem se resume em obter os gradiente de maior intensidade.
+
 ### Sobel
 O Sobel é algotritmo que calcula os gradiente aproximado de uma imagem. Porem o sobel usa um grupo de pixeis a
 
