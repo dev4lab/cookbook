@@ -14,11 +14,15 @@ Em uma imagem uma borda á caracteriza por uma variação abrupta entreo os piex
 
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap1/grafico_linha.png" width="400" height="250"/>
+    <img src="../imagens/cap1/grafico_linha.png" width="500" height="350"/>
     </p>
 </div>
 matematimente uma borda é um gradiente ou seja, uma variação de intensidade.
-
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap1/df.png" width="500" height="350"/>
+    </p>
+</div>
 existem vários operadores para detecção de bordas,, Sobel, Robinson
 baseado em operações de convoluções simples.
 
@@ -40,7 +44,7 @@ isso pode ser aplicado em uma imagem de cor. Em imagem de cor o calculo tem como
 pixels.
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap1/gauss.gif" width="400" height="250"/>
+    <img src="../imagens/cap1/gauss.gif" width="500" height="350"/>
     </p>
 </div>  
 mostrar como o sobel melhora com bur       
