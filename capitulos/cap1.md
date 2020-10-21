@@ -12,11 +12,6 @@ Em uma imagem uma borda á caracteriza por uma variação abrupta entreo os piex
     </p>
 </div>
 
-<div align="center">
-    <p align="center">
-    <img src="../imagens/cap1/grafico_linha.png" width="500" height="350"/>
-    </p>
-</div>
 matematimente uma borda é um gradiente ou seja, uma variação de intensidade.
 <div align="center">
     <p align="center">
