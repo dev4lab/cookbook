@@ -28,7 +28,7 @@ baseado em operações de convoluções simples.
 
 Encontrar contornos em imagem se resume em obter os gradiente de maior intensidade.
 ### Sobel
-O Sobel é algotritmo que calcula os gradiente aproximado de uma imagem. 
+O Sobel é algotritmo que calcula os gradiente aproximado de uma imagem. Porem o sobel usa um grupo de pixeis a
 
          [-1 -2  1]
     dx = [0   0  0]
