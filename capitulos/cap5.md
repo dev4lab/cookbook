@@ -10,7 +10,7 @@ Para esse projeto é necessário que você tenha instalado em sua máquina apena
 
 1 - Editor de textos de sua preferência, eu particularmente uso o Visual Studio Code.
 
-2 - Alguma versão Python de sua preferência, eu particularmente uso a  3.8.5
+2 - Alguma versão Python de sua preferência, eu particularmente uso a  3.8.5.
 
 3 - Biblioteca OpenCV .
 
