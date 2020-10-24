@@ -324,7 +324,7 @@ Sobre o uso dos parâmetros:
 
 * Alguns estudos sugerem que um bom classificador deve ter no mínimo 5000 imagens positivas.
 
-* Após o primeiro treinamento, se você notar que está tendo muitos falsos positivos, aumente o número de imagens negativas, se notar que não está realizando a detecção, aumente o número de imagens negativas, faça novos treinamentos até ter bons resultados.
+* Após o primeiro treinamento, se você notar que está tendo muitos falsos positivos, aumente o número de imagens negativas, se notar que não está realizando a detecção, aumente o número de imagens positivas, faça novos treinamentos até ter bons resultados.
 
 * Para melhorar os resultados você também pode aumentar o número de estágios.
 
