@@ -359,7 +359,6 @@ clf1 = cv2.CascadeClassifier(cascade_path1)
 
 #lê a imagem
 
-
 img1 = cv2.imread(imagem1)
 
 #converte para cinza
@@ -411,3 +410,5 @@ Desejo bons estudos e bons trabalhos.
 Atenciosamente,
 
 Luis Fernando Santos Ferreira, Aluno do curso de Ciência da Computação na Universidade Federal de Lavras.
+
+Linkedin: https://www.linkedin.com/in/luis-ferreira-3b02131a8/
