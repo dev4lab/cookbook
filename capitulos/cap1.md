@@ -28,7 +28,7 @@ Assim podemos fazer uma aproximação e quanto mede uma vairação pontual.
 
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap1/grid1d.png" width="200" height="90"/>
+    <img src="../imagens/cap1/gride1d.png" width="400" height="90"/>
     </p> <p align="center"> <b>Figura 1: </b> Grafico de linha da selecionada na figura 1. </p>
 </div>
 
