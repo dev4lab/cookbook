@@ -14,7 +14,7 @@ Em uma imagem uma borda á caracteriza por uma variação abrupta entre os piexe
     </p> <p align="center"> <b>Figura 1:</b>  Pista de corrida </p>
 </div>
 
-Primeiro vamos pensar apenas na linha selecionada imagens, podem representa-la por uma função i(x) cujo dominio é uma lista [254,254,173,138,79,45,53]
+Primeiro vamos pensar apenas na linha selecionada imagens, podem representa-la por uma função i(x) cujo dominio é uma lista [254,254,173,138,79,44,45,53]
 
 como nossa função é dicreta (só admite valor inteiro) não podemos calcular diretamente a derivada dessa função mais podemo obter uma boa aproximação.
 
@@ -24,13 +24,23 @@ A derivada de uma função é dada por.
          <img src="https://render.githubusercontent.com/render/math?math=\large{\frac{df}{dx}=\lim_{h\to 0} \frac{f(x %2B h)- f(x)}{h}} ">
          </p>
  </div>
+Assim podemos fazer uma aproximação e quanto mede uma vairação pontual.
 
+img
+
+O sinal negativo indica de nossa função esta decrescendo, ou seja estamos indo para uma regição mais escura. porém não estamos enteressando nessa informação, buscamo apenas a intensidade que a função esta decrescento isso é 81. Na Figua 2 calculamos isso para a linha da imagem, tente identificar onde está a regição que selecionamos.
 
 <div align="center">
     <p align="center">
     <img src="../imagens/cap1/df.png" width="500" height="350"/>
     </p> <p align="center"> <b>Figura 2: </b> Grafico de linha da selecionada na figura 1. </p>
 </div>
+
+se apandimos esse ideia para o nosso plano da imagem 2D nossa função anterir pode ser decrita da seguinte forma.
+
+
+
+
 
 existem vários operadores para detecção de bordas,, Sobel, Robinson
 baseado em operações de convoluções simples.
@@ -49,30 +59,30 @@ fdasfd
          [-1 -2 -1]
     dy = [ 0  0  0]
          [ 1  2  1] 
-Nós vamos usar uma imagem em escala de cinza para facilitar a copreenção, mas 
-isso pode ser aplicado em uma imagem de cor. Em imagem de cor o calculo tem como base a distância elclidiana dos
-pixels.
-<div align="center">
-    <p align="center">
-    <img src="../imagens/cap1/gauss.gif" width="500" height="350"/>
-    </p>
-</div>  
-mostrar como o sobel melhora com bur       
-# Algoritmo de Canny
-convolução de gaus
+
 <div align="center">
          <p align="center">
          <img src="https://render.githubusercontent.com/render/math?math=G =\sqrt{{(G_x)^2} %2B {(G_y)^2}}">
          </p>
  </div>
 
+Nós vamos usar uma imagem em escala de cinza para facilitar a copreenção, mas 
+isso pode ser aplicado em uma imagem de cor. Em imagem de cor o calculo tem como base a distância elclidiana dos
+pixels.
 
-insert
+mostrar como o sobel melhora com bur
+
+# Algoritmo de Canny
+
+convolução de gaus
+Na imamge xxx, a calculo de derivada apresenta bastante ruido, isso acontece porque pegamos micros variações locais, Canny propos o uso de uma filtro gaussiano para resolver isso. Nesse caso vamos precisar ajustar o filtro para ter um bom resultado. Seja como o filtro aféta nos derivada no Figura
+
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap1/eq_grad.png" width="180" height="35"/>
-    </p>
-</div>
-ds
+    <img src="../imagens/cap1/gauss.gif" width="500" height="350"/>
+    </p> <p align="center"> <b>Figura xx: </b> Efeito de filtro gaussiano.</p>
+</div>  
+
+
 
 Estruturas salientes.
