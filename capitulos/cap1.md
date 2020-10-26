@@ -66,7 +66,7 @@ Da mesma forma podemos rescrever isso com um kernel
 
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap1/dfpartial.png" width="600" height="350"/>
+    <img src="../imagens/cap1/kernel2D.png" width="600" height="350"/>
     </p> <p align="center"> <b>Figura 2: </b> Kernel para derivada na direção. </p>
 </div>
 
