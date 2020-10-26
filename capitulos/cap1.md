@@ -37,8 +37,15 @@ Assim podemos fazer uma aproximação e quanto mede uma vairação pontual.
          <img src="https://render.githubusercontent.com/render/math?math=\huge{\frac{dI}{dx}=I(x %2B 1)-I(x-1)} ">
          </p>
  </div>
+ Essa equação pode ser descrita por kernel.
+ 
+ <div align="center">
+    <p align="center">
+    <img src="../imagens/cap1/kernel1d.png" width="350" height="70"/>
+    </p> <p align="center"> <b>Figura 1: </b> Grafico de linha da selecionada na figura 1. </p>
+</div>
 
-O sinal negativo indica de nossa função esta decrescendo, ou seja estamos indo para uma regição mais escura. porém não estamos enteressando nessa informação, buscamo apenas a intensidade que a função esta decrescento isso é 81. Na Figua 2 calculamos isso para a linha da imagem, tente identificar onde está a regição que selecionamos.
+Na Figua 2 calculamos isso para a linha da imagem, tente identificar onde está a regição que selecionamos.
 
 <div align="center">
     <p align="center">
@@ -46,14 +53,23 @@ O sinal negativo indica de nossa função esta decrescendo, ou seja estamos indo
     </p> <p align="center"> <b>Figura 2: </b> Grafico de linha da selecionada na figura 1. </p>
 </div>
 
-se apandimos esse ideia para o nosso plano da imagem 2D nossa função anterir pode ser decrita da seguinte forma.
+se expandirmos esse ideia para o nosso plano da imagem 2D nossa função anterir pode ser decrita da seguinte forma.
 
 
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap1/grade2D.png" width="500" height="350"/>
+    </p> <p align="center"> <b>Figura 2: </b> Aproximação de derivada. </p>
+</div>
 
+Da mesma forma podemos rescrever isso com um kernel
 
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap1/dfpartial.png" width="600" height="350"/>
+    </p> <p align="center"> <b>Figura 2: </b> Kernel para derivada na direção. </p>
+</div>
 
-existem vários operadores para detecção de bordas,, Sobel, Robinson
-baseado em operações de convoluções simples.
 
 Encontrar contornos em imagem se resume em obter os gradiente de maior intensidade.
 
