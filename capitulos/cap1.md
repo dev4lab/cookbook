@@ -21,16 +21,22 @@ como nossa função é dicreta (só admite valor inteiro) não podemos calcular 
 A derivada de uma função é dada por.
 <div align="center">
          <p align="center">
-         <img src="https://render.githubusercontent.com/render/math?math=\large{\frac{df}{dx}=\lim_{h\to 0} \frac{f(x %2B h)- f(x)}{h}} ">
+         <img src="https://render.githubusercontent.com/render/math?math=\huge{\frac{df}{dx}=\lim_{h\to 0} \frac{f(x %2B h)- f(x)}{h}} ">
          </p>
  </div>
 Assim podemos fazer uma aproximação e quanto mede uma vairação pontual.
 
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap1/gride1d.png" width="400" height="90"/>
+    <img src="../imagens/cap1/gride1d.png" width="350" height="70"/>
     </p> <p align="center"> <b>Figura 1: </b> Grafico de linha da selecionada na figura 1. </p>
 </div>
+
+<div align="center">
+         <p align="center">
+         <img src="https://render.githubusercontent.com/render/math?math=\huge{\frac{dI}{dx}=I(x %2B 1)-I(x-1)} ">
+         </p>
+ </div>
 
 O sinal negativo indica de nossa função esta decrescendo, ou seja estamos indo para uma regição mais escura. porém não estamos enteressando nessa informação, buscamo apenas a intensidade que a função esta decrescento isso é 81. Na Figua 2 calculamos isso para a linha da imagem, tente identificar onde está a regição que selecionamos.
 
@@ -52,6 +58,7 @@ baseado em operações de convoluções simples.
 Encontrar contornos em imagem se resume em obter os gradiente de maior intensidade.
 
 ### Sobel
+esse par de janelas tem o nome de operador sobel
 O Sobel é algotritmo que calcula os gradiente aproximado de uma imagem. Porem o sobel usa um grupo de pixeis a
 
          [-1 -2  1]
@@ -78,8 +85,9 @@ mostrar como o sobel melhora com bur
 
 # Algoritmo de Canny
 
-convolução de gaus
-Na imamge xxx, a calculo de derivada apresenta bastante ruido, isso acontece porque pegamos micros variações locais, Canny propos o uso de uma filtro gaussiano para resolver isso. Nesse caso vamos precisar ajustar o filtro para ter um bom resultado. Seja como o filtro aféta nos derivada no Figura
+O algortimo de Canny executa varios passo para detectar uma contorno
+
+> Na imamge xxx, a calculo de derivada apresenta bastante ruido, isso acontece porque pegamos micros variações locais, Canny propos o uso de uma filtro gaussiano para resolver isso. Nesse caso vamos precisar ajustar o filtro para ter um bom resultado. Seja como o filtro aféta nos derivada no Figura
 
 <div align="center">
     <p align="center">
@@ -87,6 +95,6 @@ Na imamge xxx, a calculo de derivada apresenta bastante ruido, isso acontece por
     </p> <p align="center"> <b>Figura xx: </b> Efeito de filtro gaussiano.</p>
 </div>  
 
+> Depois de filtrado, os modulo dos gradiente são calculado usando Sobel.
 
 
-Estruturas salientes.
