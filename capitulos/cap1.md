@@ -1,13 +1,12 @@
 # Detecção de Bordas
-A detecção de objeto em imagem é um dos problemas bastante discutido em visão computacional,
-existe varios método para detectar um objeto. O método adequado para determinada situação consite naquele que melhor consilia velocidade e acurácia. esse detecção pode ser ralizada capturando atributos do objeto, as borda pode ser um deles. Por exemplo apartir da captura da borda podemos identificad diversas figuras geométricas como retangulo circulo, linhas e outros.
+A detecção de objeto em imagem é um dos problemas classicos de visão computacional. Muitos métodos já foi desenvolvido para resolver esse problema e eles recorrem a uma analogia de como nós detectamos e reconhecemos objtos. Um objeto é caracterizado por um conjunto de atributos, como cor, texturas e forma geométrica. sendo assim obter os contorno de objeto em imagem pode ser útil para muitas coisa. Por exemplo podemos identificar diversas figuras geométricas como retangulo circulo, triangulos, linhas e outros.
 
 Nessa capítulo vamos discutir como a base de como um algoritmo de deteção de borda funciona e implementar alguns deles para verificar os resultados. 
 
 
 ### O que é uma borda?
 
-Em uma imagem uma borda á caracteriza por uma variação abrupta entreo os piexels vizinho.
+Em uma imagem uma borda á caracteriza por uma variação abrupta entre os piexels vizinhos.
 
 <div align="center">
     <p align="center">
@@ -15,7 +14,17 @@ Em uma imagem uma borda á caracteriza por uma variação abrupta entreo os piex
     </p> <p align="center"> <b>Figura 1:</b>  Pista de corrida </p>
 </div>
 
-matematimente uma borda é um gradiente ou seja, uma variação de intensidade.
+Primeiro vamos pensar apenas na linha selecionada imagens, podem representa-la por uma função i(x) cujo dominio é uma lista [254,254,173,138,79,45,53]
+
+como nossa função é dicreta (só admite valor inteiro) não podemos calcular diretamente a derivada dessa função mais podemo obter uma boa aproximação.
+
+A derivada de uma função é dada por.
+<div align="center">
+         <p align="center">
+         <img src="https://render.githubusercontent.com/render/math?math=\large{\frac{df}{dx}=\lim_{h\to 0} \frac{f(x %2B h)- f(x)}{h}} ">
+         </p>
+ </div>
+
 
 <div align="center">
     <p align="center">
