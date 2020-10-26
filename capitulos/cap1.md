@@ -26,7 +26,11 @@ A derivada de uma função é dada por.
  </div>
 Assim podemos fazer uma aproximação e quanto mede uma vairação pontual.
 
-img
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap1/grid1d.png" width="200" height="90"/>
+    </p> <p align="center"> <b>Figura 1: </b> Grafico de linha da selecionada na figura 1. </p>
+</div>
 
 O sinal negativo indica de nossa função esta decrescendo, ou seja estamos indo para uma regição mais escura. porém não estamos enteressando nessa informação, buscamo apenas a intensidade que a função esta decrescento isso é 81. Na Figua 2 calculamos isso para a linha da imagem, tente identificar onde está a regição que selecionamos.
 
