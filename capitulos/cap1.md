@@ -29,7 +29,7 @@ Assim podemos fazer uma aproximação e quanto mede uma vairação pontual.
 <div align="center">
     <p align="center">
     <img src="../imagens/cap1/gride1d.png" width="350" height="70"/>
-    </p> <p align="center"> <b>Figura 1: </b> Grafico de linha da selecionada na figura 1. </p>
+    </p> <p align="center"> <b>Figura 2: Derivada aproximada </b> . </p>
 </div>
 
 <div align="center">
@@ -42,7 +42,7 @@ Assim podemos fazer uma aproximação e quanto mede uma vairação pontual.
  <div align="center">
     <p align="center">
     <img src="../imagens/cap1/kernel1d.png" width="350" height="70"/>
-    </p> <p align="center"> <b>Figura 1: </b> Grafico de linha da selecionada na figura 1. </p>
+    </p> <p align="center"> <b>Figura 3: </b> Kernel para calculo de derivada. </p>
 </div>
 
 Na Figua 2 calculamos isso para a linha da imagem, tente identificar onde está a regição que selecionamos.
@@ -50,7 +50,7 @@ Na Figua 2 calculamos isso para a linha da imagem, tente identificar onde está 
 <div align="center">
     <p align="center">
     <img src="../imagens/cap1/df.png" width="500" height="350"/>
-    </p> <p align="center"> <b>Figura 2: </b> Grafico de linha da selecionada na figura 1. </p>
+    </p> <p align="center"> <b>Figura 4: </b> Grafico de linha da selecionada na figura 1. </p>
 </div>
 
 se expandirmos esse ideia para o nosso plano da imagem 2D nossa função anterir pode ser decrita da seguinte forma.
@@ -59,33 +59,20 @@ se expandirmos esse ideia para o nosso plano da imagem 2D nossa função anterir
 <div align="center">
     <p align="center">
     <img src="../imagens/cap1/grade2D.png" width="500" height="350"/>
-    </p> <p align="center"> <b>Figura 2: </b> Aproximação de derivada. </p>
+    </p> <p align="center"> <b>Figura 5: </b> Aproximação de derivada. </p>
 </div>
 
 Da mesma forma podemos rescrever isso com um kernel
 
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap1/kernel2D.png" width="600" height="350"/>
-    </p> <p align="center"> <b>Figura 2: </b> Kernel para derivada na direção. </p>
+    <img src="../imagens/cap1/kernel2D.png" width="600" height="300"/>
+    </p> <p align="center"> <b>Figura 6: </b> Kernel para derivada parcial. </p>
 </div>
 
+Esse par de kernel na Figura 6 tem o nome de operador Sobel. ![cv2.sobel](https://docs.opencv.org/3.4/d4/d86/group__imgproc__filter.html#gacea54f142e81b6758cb6f375ce782c8d)
 
-Encontrar contornos em imagem se resume em obter os gradiente de maior intensidade.
 
-### Sobel
-esse par de janelas tem o nome de operador sobel
-O Sobel é algotritmo que calcula os gradiente aproximado de uma imagem. Porem o sobel usa um grupo de pixeis a
-
-         [-1 -2  1]
-    dx = [0   0  0]
-         [-1  2  1] 
-
-fdasfd
-
-         [-1 -2 -1]
-    dy = [ 0  0  0]
-         [ 1  2  1] 
 
 <div align="center">
          <p align="center">
