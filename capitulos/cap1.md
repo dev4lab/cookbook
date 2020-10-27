@@ -1,9 +1,7 @@
 # Detecção de Bordas
-A detecção de objeto em imagem é um dos problemas classicos de visão computacional. Muitos métodos já foi desenvolvido para resolver esse problema e eles recorrem a uma analogia de como nós detectamos e reconhecemos objtos. Um objeto é caracterizado por um conjunto de atributos, como cor, texturas e forma geométrica. sendo assim obter os contorno de objeto em imagem pode ser útil para muitas coisa. Por exemplo podemos identificar diversas figuras geométricas como retangulo circulo, triangulos, linhas e outros.
+A detecção de objeto é um dos problemas classicos de visão computacional. Muitos métodos já foram propostos e eles quase sempre recorrem a uma analogia de como nós detectamos e reconhecemos objtos. Um objeto é caracterizado por um conjunto de atributos, como cor, texturas e forma geométrica. O contorno é um do atribuitos que pode ser usado para esse fim. Por exemplo podemos identificar diversas formas geométricas como retangulo circulo, triangulos, linhas e outros.
 
-Nessa capítulo vamos discutir como a base de como um algoritmo de deteção de borda funciona e implementar alguns deles para verificar os resultados. 
-
-
+Nessa capítulo vamos conhecer alguns algoritmos para deteção de borda e implementa-los.
 ### O que é uma borda?
 
 Em uma imagem uma borda á caracteriza por uma variação abrupta entre os piexels vizinhos.
@@ -14,17 +12,17 @@ Em uma imagem uma borda á caracteriza por uma variação abrupta entre os piexe
     </p> <p align="center"> <b>Figura 1:</b>  Pista de corrida </p>
 </div>
 
-Primeiro vamos pensar apenas na linha selecionada imagens, podem representa-la por uma função i(x) cujo dominio é uma lista [254,254,173,138,79,44,45,53]
+Primeiro vamos pensar apenas na linha selecionada imagem, podem representa-la por uma função i(x) cujo dominio é uma lista [254,254,173,138,79,44,45,53]
 
-como nossa função é dicreta (só admite valor inteiro) não podemos calcular diretamente a derivada dessa função mais podemo obter uma boa aproximação.
+como nossa função é dicreta (só admite valor inteiro) não podemos calcular diretamente a derivada dessa função mais podemos fazer uma boa aproximação.
 
 A derivada de uma função é dada por.
 <div align="center">
          <p align="center">
-         <img src="https://render.githubusercontent.com/render/math?math=\huge{\frac{df}{dx}=\lim_{h\to 0} \frac{f(x %2B h)- f(x)}{h}} ">
-         </p>
+         <img src="https://render.githubusercontent.com/render/math?math=\Large{\frac{df}{dx}=\lim_{h\to 0} \frac{f(x %2B h)- f(x)}{h}} ">
+         </p>  <p align="center"> <b>Equção 1: </b> Derivada. </p>
  </div>
-Assim podemos fazer uma aproximação e quanto mede uma vairação pontual.
+Podemos fazer uma aproximação para um calculo pontual.
 
 <div align="center">
     <p align="center">
@@ -34,10 +32,10 @@ Assim podemos fazer uma aproximação e quanto mede uma vairação pontual.
 
 <div align="center">
          <p align="center">
-         <img src="https://render.githubusercontent.com/render/math?math=\huge{\frac{dI}{dx}=I(x %2B 1)-I(x-1)} ">
-         </p>
+         <img src="https://render.githubusercontent.com/render/math?math=\Large{\frac{dI}{dx}=I(x %2B 1)-I(x-1)} ">
+         </p> <p align="center"> <b>Equção 2: </b> Derivada aproximada. </p>
  </div>
- Essa equação pode ser descrita por kernel.
+ Essa equação pode ser descrita por um kernel. A convolução desse kernel nos da o mesmo resultado da equação.
  
  <div align="center">
     <p align="center">
@@ -53,24 +51,24 @@ Na Figua 2 calculamos isso para a linha da imagem, tente identificar onde está 
     </p> <p align="center"> <b>Figura 4: </b> Grafico de linha da selecionada na figura 1. </p>
 </div>
 
-Se expandirmos esse ideia para o plano da imagem 2D nossa função anterir pode ser decrita da seguinte forma.
+Se expandirmos esse ideia para o plano 2D nossa função anterir pode ser decrita da seguinte forma.
 
 
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap1/grade2d.png" width="300" height="300"/>
+    <img src="../imagens/cap1/grade2d.png" width="300" height="200"/>
     </p> <p align="center"> <b>Figura 5: </b> Aproximação de derivada. </p>
 </div>
 
-Da mesma forma podemos rescrever isso com um kernel
+Agora temos dois eixos, portanto calculamos a derivada parcial. Da mesma forma podemos rescrever isso com um kernel
 
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap1/kernel2D.png" width="500" height="200"/>
+    <img src="../imagens/cap1/kernel2D.png" width="450" height="180"/>
     </p> <p align="center"> <b>Figura 6: </b> Kernel para derivada parcial. </p>
 </div>
 
-Esse par de kernel na Figura 6 tem o nome de operador Sobel. ![cv2.sobel](https://docs.opencv.org/3.4/d4/d86/group__imgproc__filter.html#gacea54f142e81b6758cb6f375ce782c8d)
+Esse par de kernel na Figura 6 tem o nome de operador Sobel. O OpenCV tem esse operador implementado aqui ![cv2.sobel](https://docs.opencv.org/3.4/d4/d86/group__imgproc__filter.html#gacea54f142e81b6758cb6f375ce782c8d)
 
 ```python
 import cv2
@@ -100,22 +98,19 @@ cv2.waitKey(0)
 
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap1/saida_sobel.png" width="600" height="300"/>
+    <img src="../imagens/cap1/saida_sobel.png" width="500" height="250"/>
     </p> <p align="center"> <b>Figura 7: </b> Resultado do Sobel. </p>
 </div>
 
+Percebe que aplicamo o operador Sobel duas vezes, primeiro na direção x e depois na direção y. A composição dessas derivada é matematicamente conhecida com gradiente. O gradiente é um vetor que aponta na direção onde a função tem a maoir variação. No entanto, o que nos interessa aqui é magnitude desse gradiente, ou seja o quão abrupta é aquela variação. Essa operação é decrita pela Equação 2 e usarmo a função cv2.addWeighted para calcular.
 
 <div align="center">
          <p align="center">
          <img src="https://render.githubusercontent.com/render/math?math=G =\sqrt{{(G_x)^2} %2B {(G_y)^2}}">
-         </p>
+         </p> <p align="center"> <b>Eqiação 3: </b> Magnitude do gradiente. </p>
  </div>
 
-
-
-
-
-Nós vamos usar uma imagem em escala de cinza para facilitar a copreenção, mas 
+nos usamos uma imagem em escala de cinza para facilitar a copreenção, mas 
 isso pode ser aplicado em uma imagem de cor. Em imagem de cor o calculo tem como base a distância elclidiana dos
 pixels.
 
@@ -135,14 +130,14 @@ Na figura 4, o grafico da derivada apresenta bastante ruido, isso acontece porqu
 </div>  
 
 #### 2. Calcular gradientes.
-O filtro Sobel discutido no tópico anterir é usada para calcular o gradinentes.
+O filtro Sobel discutido no tópico anterir é usado aqui para calcular o gradientes.
 
 #### 3. Máximos locais.
 Nessa etapa uma varredura completa é realizada na imagem em busca de gradientes máximo locais, esse processo elemina bordas largas ou duplicadas.
 
 #### 4 Limiar de hesterese.
 
-Tudo que esta abaixo de minVal é descartado. o que esta entre minVal e maxVal é mantido apenas se parte do contorno estiver acima de maxVal. Na Figura 9, A é mantido porque esta acima de maxval, C é mantido embora esteja abaixo de maxVal ele esta conectado a A. Já o B é removido, pois esta totalmente dentro da área delimintada.
+Tudo que esta abaixo de minVal é descartado. o que esta entre minVal e maxVal é mantido apenas se parte do contorno estiver acima de maxVal. Na Figura 9, A é mantido porque esta acima de maxval, C é mantido, embora esteja abaixo de maxVal ele esta conectado a A. Já o B é removido, pois esta totalmente dentro da área delimintada.
 
 <div align="center">
     <p align="center">
@@ -151,19 +146,24 @@ Tudo que esta abaixo de minVal é descartado. o que esta entre minVal e maxVal �
 </div>  
 
 ### Usando Canny
-No OpnCV temos uma implementação do algoritmo de Canny, 
+No OpenCV temos uma implementação do algoritmo de Canny, o segundo e o terceiro parâmetro passados são minVal e maxVal.
 
 ```python
 import cv2
+# Carrega imagem em escala de cinza
 gray = cv2.imread('frame.png',cv2.IMREAD_GRAYSCALE)
+# aplica algoritmo de Canny com minVal=100 e maxVal=200
 edges = cv2.Canny(gray,100,200)
+# concatena imagem original com o resultado
 saida=cv2.hconcat((gray,edges))
+#redimenciona 
 saida=cv2.resize(saida,None,None,0.4,0.4)
+#Mostra saida
 cv2.imshow("janela",saida)
 cv2.waitKey()
 ```
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap1/saida_canny.png" width="600" height="300"/>
+    <img src="../imagens/cap1/saida_canny.png" width="500" height="250"/>
     </p> <p align="center"> <b>Figura 9: </b> Resultado do Canny. </p>
 </div>
