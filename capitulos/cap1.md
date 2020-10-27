@@ -28,7 +28,7 @@ Assim podemos fazer uma aproximação e quanto mede uma vairação pontual.
 
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap1/gride1d.png" width="350" height="70"/>
+    <img src="../imagens/cap1/gride1d.png" width="300" height="50"/>
     </p> <p align="center"> <b>Figura 2: Derivada aproximada </b> . </p>
 </div>
 
@@ -41,7 +41,7 @@ Assim podemos fazer uma aproximação e quanto mede uma vairação pontual.
  
  <div align="center">
     <p align="center">
-    <img src="../imagens/cap1/kernel1d.png" width="350" height="70"/>
+    <img src="../imagens/cap1/kernel1d.png" width="300" height="50"/>
     </p> <p align="center"> <b>Figura 3: </b> Kernel para calculo de derivada. </p>
 </div>
 
@@ -58,7 +58,7 @@ Se expandirmos esse ideia para o plano da imagem 2D nossa função anterir pode 
 
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap1/grade2d.png" width="500" height="350"/>
+    <img src="../imagens/cap1/grade2d.png" width="300" height="300"/>
     </p> <p align="center"> <b>Figura 5: </b> Aproximação de derivada. </p>
 </div>
 
@@ -66,7 +66,7 @@ Da mesma forma podemos rescrever isso com um kernel
 
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap1/kernel2D.png" width="600" height="300"/>
+    <img src="../imagens/cap1/kernel2D.png" width="500" height="200"/>
     </p> <p align="center"> <b>Figura 6: </b> Kernel para derivada parcial. </p>
 </div>
 
@@ -122,9 +122,11 @@ pixels.
 
 # Algoritmo de Canny
 
-O algortimo de Canny executa varios passo para detectar uma contorno
+O algortimo de Canny executa varios estágio para detectar uma contorno.
 
-Na imamge xxx, a calculo de derivada apresenta bastante ruido, isso acontece porque pegamos micros variações locais, Canny propos o uso de uma filtro gaussiano para resolver isso. Nesse caso vamos precisar ajustar o filtro para ter um bom resultado. Seja como o filtro aféta nos derivada no Figura
+#### 1. remoção de ruídos.
+
+Na figura 4, o grafico da derivada apresenta bastante ruido, isso acontece porque pegamos micros variações locais. Canny usa um filtro gaussiano para resolver isso. Seja como o filtro afeta a derivada no Figura 8.
 
 <div align="center">
     <p align="center">
@@ -132,7 +134,24 @@ Na imamge xxx, a calculo de derivada apresenta bastante ruido, isso acontece por
     </p> <p align="center"> <b>Figura 8: </b> Efeito de filtro gaussiano.</p>
 </div>  
 
-Depois de filtrado, os modulo dos gradiente são calculado usando Sobel.
+#### 2. Calcular gradientes.
+O filtro Sobel discutido no tópico anterir é usada para calcular o gradinentes.
+
+#### 3. Máximos locais.
+Nessa etapa uma varredura completa é realizada na imagem em busca de gradientes máximo locais, esse processo elemina bordas largas ou duplicadas.
+
+#### 4 Limiar de hesterese.
+
+Tudo que esta abaixo de minVal é descartado. o que esta entre minVal e maxVal é mantido apenas se parte do contorno estiver acima de maxVal. Na Figura 9, A é mantido porque esta acima de maxval, C é mantido embora esteja abaixo de maxVal ele esta conectado a A. Já o B é removido, pois esta totalmente dentro da área delimintada.
+
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap1/gauss.gif" width="500" height="350"/>
+    </p> <p align="center"> <b>Figura 9: </b>Região delimitada pelos liminar maxVal e minVal. <h5>Fonte: <url>https://docs.opencv.org/master/da/d22/tutorial_py_canny.html</url></h5>.</p>
+</div>  
+
+### Usando Canny
+No OpnCV temos uma implementação do algoritmo de Canny, 
 
 ```python
 import cv2
