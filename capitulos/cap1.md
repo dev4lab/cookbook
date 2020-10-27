@@ -53,12 +53,12 @@ Na Figua 2 calculamos isso para a linha da imagem, tente identificar onde está 
     </p> <p align="center"> <b>Figura 4: </b> Grafico de linha da selecionada na figura 1. </p>
 </div>
 
-se expandirmos esse ideia para o nosso plano da imagem 2D nossa função anterir pode ser decrita da seguinte forma.
+Se expandirmos esse ideia para o plano da imagem 2D nossa função anterir pode ser decrita da seguinte forma.
 
 
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap1/grade2D.png" width="500" height="350"/>
+    <img src="../imagens/cap1/grade2d.png" width="500" height="350"/>
     </p> <p align="center"> <b>Figura 5: </b> Aproximação de derivada. </p>
 </div>
 
@@ -72,6 +72,37 @@ Da mesma forma podemos rescrever isso com um kernel
 
 Esse par de kernel na Figura 6 tem o nome de operador Sobel. ![cv2.sobel](https://docs.opencv.org/3.4/d4/d86/group__imgproc__filter.html#gacea54f142e81b6758cb6f375ce782c8d)
 
+```python
+import cv2
+ddepth = cv2.CV_16S
+# Carrega imagen "frame.png" em escala de cinza
+gray = cv2.imread("frame.png",cv2.IMREAD_GRAYSCALE)
+# calcula derivada de primeira ordem na direção x 
+grad_x = cv2.Sobel(gray, ddepth, 1, 0, ksize=3)
+# calcula derivada de primieira ordem na direção y
+grad_y = cv2.Sobel(gray, ddepth, 0, 1, ksize=3)
+
+# calcula valor absoluto e converte para uint8 
+abs_grad_x = cv2.convertScaleAbs(grad_x)
+abs_grad_y = cv2.convertScaleAbs(grad_y)
+
+# Calcula gradiente
+grad = cv2.addWeighted(abs_grad_x, 0.5, abs_grad_y, 0.5, 0)
+# concatena image gerada com a original
+saida=cv2.hconcat((grad,gray))
+# redimenciona em 60%
+saida=cv2.resize(saida,None,None,0.4,0.4)
+#salva imagem
+cv2.imwrite("saida.png",saida)
+cv2.imshow("janela", saida)
+cv2.waitKey(0)
+```
+
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap1/saida_sobel.png" width="600" height="300"/>
+    </p> <p align="center"> <b>Figura 7: </b> Resultado do Sobel. </p>
+</div>
 
 
 <div align="center">
@@ -80,11 +111,14 @@ Esse par de kernel na Figura 6 tem o nome de operador Sobel. ![cv2.sobel](https:
          </p>
  </div>
 
+
+
+
+
 Nós vamos usar uma imagem em escala de cinza para facilitar a copreenção, mas 
 isso pode ser aplicado em uma imagem de cor. Em imagem de cor o calculo tem como base a distância elclidiana dos
 pixels.
 
-mostrar como o sobel melhora com bur
 
 # Algoritmo de Canny
 
