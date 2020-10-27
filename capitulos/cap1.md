@@ -1,5 +1,5 @@
 # Detecção de Bordas
-A detecção de objeto é um dos problemas classicos de visão computacional. Muitos métodos já foram propostos e eles quase sempre recorrem a uma analogia de como nós detectamos e reconhecemos objtos. Um objeto é caracterizado por um conjunto de atributos, como cor, texturas e forma geométrica. O contorno é um do atribuitos que pode ser usado para esse fim. Por exemplo podemos identificar diversas formas geométricas como retangulo circulo, triangulos, linhas e outros.
+A visão computacional é composta por um conjunto de métodos tendo com objetivo extrair informações de dados multimencionais. Quase sempre esses métodos recorrem a uma analogia de como nós detectamos e reconhecemos objtos. Um objeto é caracterizado por um conjunto de atributos, como cor, texturas e forma geométrica. O contorno é um do atribuitos que pode ser usado para esse fim. Por exemplo podemos identificar diversas formas geométricas como retangulo circulo, triangulos, linhas e outros.
 
 Nessa capítulo vamos conhecer alguns algoritmos para deteção de borda e implementa-los.
 ### O que é uma borda?
