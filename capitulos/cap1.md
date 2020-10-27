@@ -124,14 +124,27 @@ pixels.
 
 O algortimo de Canny executa varios passo para detectar uma contorno
 
-> Na imamge xxx, a calculo de derivada apresenta bastante ruido, isso acontece porque pegamos micros variações locais, Canny propos o uso de uma filtro gaussiano para resolver isso. Nesse caso vamos precisar ajustar o filtro para ter um bom resultado. Seja como o filtro aféta nos derivada no Figura
+Na imamge xxx, a calculo de derivada apresenta bastante ruido, isso acontece porque pegamos micros variações locais, Canny propos o uso de uma filtro gaussiano para resolver isso. Nesse caso vamos precisar ajustar o filtro para ter um bom resultado. Seja como o filtro aféta nos derivada no Figura
 
 <div align="center">
     <p align="center">
     <img src="../imagens/cap1/gauss.gif" width="500" height="350"/>
-    </p> <p align="center"> <b>Figura xx: </b> Efeito de filtro gaussiano.</p>
+    </p> <p align="center"> <b>Figura 8: </b> Efeito de filtro gaussiano.</p>
 </div>  
 
-> Depois de filtrado, os modulo dos gradiente são calculado usando Sobel.
+Depois de filtrado, os modulo dos gradiente são calculado usando Sobel.
 
-
+```python
+import cv2
+gray = cv2.imread('frame.png',cv2.IMREAD_GRAYSCALE)
+edges = cv2.Canny(gray,100,200)
+saida=cv2.hconcat((gray,edges))
+saida=cv2.resize(saida,None,None,0.4,0.4)
+cv2.imshow("janela",saida)
+cv2.waitKey()
+```
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap1/saida_canny.png" width="600" height="300"/>
+    </p> <p align="center"> <b>Figura 9: </b> Resultado do Canny. </p>
+</div>
