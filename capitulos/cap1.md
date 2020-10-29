@@ -1,10 +1,10 @@
 # Detecção de Bordas
-A visão computacional é uma área da ceiência que desenvolve teorias e tecnologia tendo com objetivo extrair informações de dados multimencionais. Quase sempre recorremos a uma analogia de como nós detectamos e reconhecemos objetos. Um objeto é caracterizado por um conjunto de atributos, como cor, texturas e forma geométrica. O contorno é um dos atribuitos que pode ser usado para esse fim. Por exemplo podemos identificar diversas formas geométricas como retangulo circulo, triangulos, linhas e outros.
+A visão computacional é uma área da ceiência que desenvolve teorias e tecnologia tendo com objetivo extrair informações de dados multimencionais. Quase sempre, recorremos a uma analogia de como nós detectamos e reconhecemos objetos. Um objeto é caracterizado por um conjunto de atributos como: cor, texturas e forma geométrica. A extração de contorno poder forncer informções sobre a geometria. Por exemplo podemos identificar diversas formas geométricas como retangulo circulo, triangulos, linhas e outros.
 
-Nessa capítulo vamos conhecer alguns algoritmos para deteção de borda e implementa-los.
+Nessa capítulo vamos conhecer a base dos algoritmos de deteção de borda e implementa-los o algoritmo de Canny.
 ### O que é uma borda?
 
-Em uma imagem uma borda á caracteriza por uma variação abrupta entre os piexels vizinhos.
+Uma borda á caracteriza por uma variação abrupta entre os piexels vizinhos de uma imagem.
 
 <div align="center">
     <p align="center">
@@ -12,16 +12,17 @@ Em uma imagem uma borda á caracteriza por uma variação abrupta entre os piexe
     </p> <p align="center"> <b>Figura 1:</b>  Pista de corrida </p>
 </div>
 
-Primeiro vamos pensar apenas na linha selecionada imagem, podem representa-la por uma função i(x) cujo dominio é uma lista [254,254,173,138,79,44,45,53]
+Primeiro vamos pensar apenas na linha selecionada Figura 1, podem representa-la por uma função I(x) cujo dominio é uma lista [254,254,173,138,79,44,45,53]
 
-como nossa função é dicreta (só admite valor inteiro) não podemos calcular diretamente a derivada dessa função mais podemos fazer uma boa aproximação.
+Como nossa função é dicreta (só admite valor inteiro) não podemos calcular diretamente a derivada dessa função mais podemos fazer uma boa aproximação.
 
-A derivada de uma função é dada por.
+A derivada é uma operação matemática que permite calculara a taxa de variação de uma função ou de dois pontos muito próximos. Ela é definida pela equação 1.
 <div align="center">
          <p align="center">
          <img src="https://render.githubusercontent.com/render/math?math=\Large{\frac{df}{dx}=\lim_{h\to 0} \frac{f(x %2B h)- f(x)}{h}} ">
          </p>  <p align="center"> <b>Equção 1: </b> Derivada. </p>
  </div>
+ Supondo que x seja a posição que estamos na lista então f(x) é o valor do pixel e f(x+h) é próximo pixel.
 Podemos fazer uma aproximação para um calculo pontual.
 
 <div align="center">
@@ -176,7 +177,9 @@ cv2.waitKey()
 </table>
 
 **Atenciosamente**
+
 Elton fernandes dos Santos
 
 Engenheiro eletricista e mestrando em Zootecnia na Universidade Federal do Mato Grosso.
+
 Autor do blog ![visioncompy](www.visioncompy.com)
