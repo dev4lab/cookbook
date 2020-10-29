@@ -1,5 +1,5 @@
 # Detecção de Bordas
-A visão computacional é composta por um conjunto de métodos tendo com objetivo extrair informações de dados multimencionais. Quase sempre esses métodos recorrem a uma analogia de como nós detectamos e reconhecemos objtos. Um objeto é caracterizado por um conjunto de atributos, como cor, texturas e forma geométrica. O contorno é um do atribuitos que pode ser usado para esse fim. Por exemplo podemos identificar diversas formas geométricas como retangulo circulo, triangulos, linhas e outros.
+A visão computacional é uma área da ceiência que desenvolve teorias e tecnologia tendo com objetivo extrair informações de dados multimencionais. Quase sempre recorremos a uma analogia de como nós detectamos e reconhecemos objetos. Um objeto é caracterizado por um conjunto de atributos, como cor, texturas e forma geométrica. O contorno é um dos atribuitos que pode ser usado para esse fim. Por exemplo podemos identificar diversas formas geométricas como retangulo circulo, triangulos, linhas e outros.
 
 Nessa capítulo vamos conhecer alguns algoritmos para deteção de borda e implementa-los.
 ### O que é uma borda?
@@ -141,7 +141,7 @@ Tudo que esta abaixo de minVal é descartado. o que esta entre minVal e maxVal �
 
 <div align="center">
     <p align="center">
-    <img src="../imagens/cap1/gauss.gif" width="500" height="350"/>
+    <img src="../imagens/cap1/grafico_maxval.png" width="500" height="350"/>
     </p> <p align="center"> <b>Figura 9: </b>Região delimitada pelos liminar maxVal e minVal. <h5>Fonte: <url>https://docs.opencv.org/master/da/d22/tutorial_py_canny.html</url></h5>.</p>
 </div>  
 
@@ -174,3 +174,9 @@ cv2.waitKey()
         <td>Documentação oficial opencv v 4.5.0: Algoritmo de Canny. fonte https://docs.opencv.org/master/da/d22/tutorial_py_canny.html</td>
     </tr>
 </table>
+
+**Atenciosamente**
+Elton fernandes dos Santos
+
+Engenheiro eletricista e mestrando em Zootecnia na Universidade Federal do Mato Grosso.
+Autor do blog ![visioncompy](www.visioncompy.com)
