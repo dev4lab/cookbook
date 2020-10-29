@@ -167,3 +167,10 @@ cv2.waitKey()
     <img src="../imagens/cap1/saida_canny.png" width="500" height="250"/>
     </p> <p align="center"> <b>Figura 9: </b> Resultado do Canny. </p>
 </div>
+
+
+<table>
+    <tr>
+        <td>Documentação oficial opencv v 4.5.0: Algoritmo de Canny. fonte https://docs.opencv.org/master/da/d22/tutorial_py_canny.html</td>
+    </tr>
+</table>
