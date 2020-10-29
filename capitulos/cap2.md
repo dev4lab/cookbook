@@ -61,8 +61,115 @@ O que será necessário para realizar os tutoriais a seguir:
 - Python 3.x instalado em sua máquina;
 - OpenCV 4;
 - Um editor de código ou IDE de sua preferência (Eu utilizo o VS Code);
-- Os dados que utilizaremos para executar os tutoriais podem ser baixados [aqui]()
+- Os dados que utilizaremos para executar os tutoriais podem ser baixados [aqui](../imagens/cap2/).
 
+<b>Exemplo 1: Erosão</b>
+
+Observe a imagem abaixo. Note que não há muitos detalhes nesta imagem e isso pode facilitar as coisas para nós.
 
 <div align="center">
-<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
+    <p align="center">
+    <img src="../imagens/cap2/ex1.png" width="250" height="200"/>
+    </p>
+    <p> <b>Figura 2:</b> Exemplo 1 </p>
+</div>
+
+Primeiro vamos supor que, por algum motivo, queremos eliminar a linha que conecta os circulos. Esta é uma operação de remoção de alguns pixels, por isso usaremos a <b>Erosão</b> para remover os pixels desta linha.
+
+Com a OpenCV o processo de aplicar a erosão é muito simples:
+
+```python
+import cv2, sys
+import numpy as np
+
+#lendo a imagem
+img = cv2.imread("ex1.png",0)
+
+if img is None:
+    print("Não foi possível ler a imagem!")
+    sys.exit()
+
+#criando um elemento estruturante de tamanho 5x5
+kernel = np.ones((5,5),np.uint8)
+
+#Aplicando a erosão
+erosao = cv2.erode(img, kernel, iterations = 1)
+
+cv2.imwrite("erosao_ex1.jpg", erosao)
+```
+No código acima utilizamos um elemento estruturante (que também pode ser chamado de kernel) de tamanho 5x5 para aplicar a erosão. Neste kernel, todos os valores são iguais a 1. Você pode criar kernels personalizados que tenham também valores igual a zero, mas aqui utilizamos desta forma para facilitar.
+
+O parâmetro <i>iterations</i> é o número de vezes que a erosão será aplicada à imagem. No nosso caso, aplicamos a erosão apenas uma vez.
+
+E temos o seguinte resultado:
+
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap2/erosao_ex1.jpg" width="250" height="200"/>
+    </p>
+    <p> <b>Figura 3:</b> Resultado da Erosão </p>
+</div>
+
+Sinta-se à vontade para brincar um pouco com os parâmetros deste trecho de código! Veja o que acontece quando o kernel tem tamanhos menores, tamanhos maiores e quando o número de iterações é maior!
+
+Podemos dizer que as principais aplicações para a erosão são:
+
+- Remoção de ruídos na imagem;
+
+- Remoção de atributos que não são interessantes para a aplicação em questão. Podemos imaginar que os círculos brancos são topos de postes e que a linha era um fio passando por eles. Através da erosão removemos o fio.
+
+<b>Exemplo 2: Dilatação</b>
+
+Vamos supor agora que temos uma imagem na qual os círculos tem alguns "buracos" e queremos fechá-los. Precisamos de uma operação que possa adiiconar pixels aos circulos brancos, logo, precisamos da <b>Dilatação</b>.
+
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap2/ex2.png" width="250" height="200"/>
+    </p>
+    <p> <b>Figura 4:</b> Exemplo para Dilatação </p>
+</div>
+
+E novamente podemos usar a openCV para implementar facilmente esta operação:
+
+```python
+import cv2, sys
+import numpy as np
+
+img = cv2.imread("ex2.png",0)
+
+if img is None:
+    print("Não foi possível ler a imagem!")
+    sys.exit()
+
+kernel = np.ones((5,5),np.uint8)
+dilatacao = cv2.dilate(img,kernel,iterations = 2)
+
+cv2.imwrite("dilatacao_ex2.jpg", dilatacao)
+```
+
+Neste exemplo usamos o mesmo kernel que utilizamos no exemplo anterior e aplicamos a dilatação duas vezes (<i>iterations = 2</i>) para fechar os círculos brancos.
+
+Temos o seguinte resultado:
+
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap2/dilatacao_ex2.jpg" width="250" height="200"/>
+    </p>
+    <p> <b>Figura 5:</b> Resultado da Dilatação </p>
+</div>
+
+Te convido novamente a realizar testes alterando o tamanho do kernel e a quantidade de iterações para ver o que acontece em cada caso!
+
+Quero novamente chamar a sua atenção para o fato de que nós não apenas "fechamos os círculos", mas note que os círculos estão maiores do que na imagem original (Fig. 4) e estão assumindo uma forma um pouco retangular, por isso devemos usar a dilatação com cuidado para que não modifiquemos demais as características de um objeto na imagem!
+
+Podemos dizer que as principais aplicações da Dilatação são:
+
+- Quando queremos que objetos sejam "destacados" fazendo com que eles fiquem maiores na imagem;
+
+- Quando queremos "fechar buracos" ou até mesmo conectar elementos que estão muito próximos um do outro na imagem, porém não o suficiente para se conectarem.
+
+***
+**Atenciosamente**</br>
+Natália C. de Amorim
+
+Mestre em Ciências Geodésicas e Doutoranda em Ciências Geodésicas na Universidade Federal do Paraná.
