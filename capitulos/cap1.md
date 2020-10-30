@@ -172,7 +172,13 @@ cv2.waitKey()
     </p> <p align="center"> <b>Figura 9: </b> Resultado do Canny. </p>
 </div>
 
-[![Everything Is AWESOME](../imagens/cap1/yutub.png)](https://www.youtube.com/watch?v=DNIQdUHHB7A&feature=youtu.be&ab_channel=eltonfernando)")
+<div align="center">
+    <p align="center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/DNIQdUHHB7A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p> <p align="center"> <b>Figura 9: </b> Resultado do Canny. </p>
+</div>
+
+[![Everything Is AWESOME](../imagens/cap1/yutub.png)](https://www.youtube.com/watch?v=DNIQdUHHB7A&feature=youtu.be&ab_channel=eltonfernando")
 
 
 ## Conclusão
