@@ -172,6 +172,9 @@ cv2.waitKey()
     </p> <p align="center"> <b>Figura 9: </b> Resultado do Canny. </p>
 </div>
 
+[![Everything Is AWESOME](../imagens/cap1/yutub.png)](https://www.youtube.com/watch?v=DNIQdUHHB7A&feature=youtu.be&ab_channel=eltonfernando)")
+
+
 ## Conclusão
 De fato a aréa de visão computacional é permeada por aplicação matemáticas de alta complexidade. No entanto, bibliotecas como OpenCV tem simplificado, permitindo que pessoas de divesas áreas desenvolva suas própias aplicações. Se você gostou desse assunto, junte-se a nós no grupo do telegram.
 
