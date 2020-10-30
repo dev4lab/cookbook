@@ -173,6 +173,8 @@ cv2.waitKey()
     </p> <p align="center"> <b>Figura 9: </b> Resultado do Canny. </p>
 </div>
 
+Aqui deixo um vídeo com animação gráfica do que discutimos nesse artigo.
+
 [![Everything Is AWESOME](../imagens/cap1/yutub.png)](https://www.youtube.com/watch?v=DNIQdUHHB7A&feature=youtu.be&ab_channel=eltonfernando")
 
 
@@ -181,7 +183,7 @@ De fato, a área de visão computacional é permeada por aplicações matemátic
 
 **Atenciosamente**
 
-Elton fernandes dos Santos
+[<img src="https://raw.githubusercontent.com/Delta456/Delta456/master/img/instagram.jpg" alt="instagram logo" width="24">](https://www.instagram.com/eltonfernandosantos/?hl=pt-br) Elton fernandes dos Santos 
 
 Engenheiro eletricista e mestrando em Zootecnia na Universidade Federal do Mato Grosso.
 
