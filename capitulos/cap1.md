@@ -117,7 +117,7 @@ Percebe que aplicamos o operador Sobel duas vezes, primeiro na direção x e dep
          </p> <p align="center"> <b>Eqiação 3: </b> Magnitude do gradiente. </p>
  </div>
 
-O Sobel é uma das operações mais relevantes para detectar contorno em imagans. Embora exista alternaticas como cv2.ca que tem uma aproximação melhor da derivada. O Sobel ainda é um dos principais métodos empregado nos algoritmo de detecção de borda. 
+O Sobel é uma das operações mais relevantes para detectar contorno em imagans. Embora exista alternaticas como cv2.Scharr que tem uma aproximação melhor da derivada. O Sobel ainda é um dos principais métodos empregado nos algoritmo de detecção de borda. 
 
 # Algoritmo de Canny
 
@@ -172,10 +172,17 @@ cv2.waitKey()
     </p> <p align="center"> <b>Figura 9: </b> Resultado do Canny. </p>
 </div>
 
+## Conclusão
+De fato a aréa de visão computacional é permeada por aplicação matemáticas de alta complexidade. No entanto, bibliotecas como OpenCV tem simplificado, permitindo que pessoas de divesas áreas desenvolva suas própias aplicações. Se você gostou desse assunto, junte-se a nós no grupo do telegram.
+
+## Referências
 
 <table>
+     <tr>
+        <td> Documentação oficial OpenCV v 4.5.0: Sobel. fonte https://docs.opencv.org/master/d2/d2c/tutorial_sobel_derivatives.html</td>
+    </tr>
     <tr>
-        <td>Documentação oficial opencv v 4.5.0: Algoritmo de Canny. fonte https://docs.opencv.org/master/da/d22/tutorial_py_canny.html</td>
+        <td> Documentação oficial OpenCV v 4.5.0: Algoritmo de Canny. fonte https://docs.opencv.org/master/da/d22/tutorial_py_canny.html</td>
     </tr>
 </table>
 
@@ -185,4 +192,4 @@ Elton fernandes dos Santos
 
 Engenheiro eletricista e mestrando em Zootecnia na Universidade Federal do Mato Grosso.
 
-Autor do blog ![visioncompy](www.visioncompy.com)
+Autor do blog [visioncompy](www.visioncompy.com)
