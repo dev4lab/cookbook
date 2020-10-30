@@ -179,7 +179,7 @@ Aqui deixo um vídeo com animação gráfica do que discutimos nesse artigo.
 
 
 ## Conclusão
-De fato, a área de visão computacional é permeada por aplicações matemáticas de alta complexidade. No entanto, bibliotecas como OpenCV tem simplificado, permitindo que pessoas de diversas áreas desenvolva suas própias aplicações. Se você gostou desse assunto, junte-se a nós no grupo opencvBrail [<img src = "https://logospng.org/download/telegram/logo-telegram-512.png" alt="telegram logo" width="24">](https://t.me/opencvBrasil).
+De fato, a área de visão computacional é permeada por aplicações matemáticas de alta complexidade. No entanto, bibliotecas como OpenCV tem simplificado, permitindo que pessoas de diversas áreas desenvolva suas própias aplicações. Se você gostou desse assunto, junte-se a nós no grupo opencvBrasil [<img src = "https://logospng.org/download/telegram/logo-telegram-512.png" alt="telegram logo" width="24">](https://t.me/opencvBrasil).
 
 **Atenciosamente**
 
