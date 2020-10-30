@@ -1,13 +1,13 @@
 # Detecção de Bordas
-A visão computacional é uma área da ceiência que desenvolve teorias e tecnologia tendo com objetivo extrair informações de dados multimencionais. Quase sempre, recorremos a uma analogia de como nós detectamos e reconhecemos objetos. Um objeto é caracterizado por um conjunto de atributos como: cor, texturas e forma geométrica. A extração de contorno poder forncer informções sobre a geometria. Por exemplo podemos identificar diversas formas geométricas como retangulo circulo, triangulos, linhas e outros.
+A visão computacional é uma área da ciência que desenvolve teorias e tecnologia tendo com objetivo extrair informações de dados multidimensionais. Quase sempre, recorremos a uma analogia de como nós detectamos e reconhecemos objetos. Um objeto é caracterizado por um conjunto de atributos como: cor, texturas e forma geométrica. A extração de contorno poder fornecer informações sobre um determinado objeto. Por exemplo, podemos identificar diversas formas geométricas como retângulo circulo, triângulos, linhas e outros.
 
-Nessa capítulo vamos conhecer a base dos algoritmos de deteção de borda e implementar o algoritmo de Canny.
+Nessa capítulo vamos conhecer a base dos algoritmos de detecção de borda e implementar o algoritmo de Canny.
 
-para executar os scripts mostrado aqui você precisará ter em sua máquina uma versão do python 3 e o OpenCV instalados.
+Para executar os scripts mostrado aqui você precisará ter em sua máquina uma versão do python 3 e o OpenCV instalados.
 
 ### O que é uma borda?
 
-Uma borda á caracteriza por uma variação abrupta entre os piexels vizinhos de uma imagem.
+Uma borda á caracteriza por uma variação abrupta entre os pixels vizinhos de uma imagem.
 
 <div align="center">
     <p align="center">
@@ -15,9 +15,9 @@ Uma borda á caracteriza por uma variação abrupta entre os piexels vizinhos de
     </p> <p align="center"> <b>Figura 1:</b>  Pista de corrida </p>
 </div>
 
-Primeiro vamos pensar apenas na linha selecionada Figura 1, podem representa-la por uma função I(x) cujo dominio é uma lista [254,254,173,138,79,44,45,53]
+Primeiro vamos pensar apenas na linha selecionada Figura 1, podemos representar por uma função I(x) cujo domínio é uma lista [254,254,173,138,79,44,45,53]
 
-Como nossa função é dicreta (só admite valor inteiro) não podemos calcular diretamente a derivada dessa função mais podemos fazer uma boa aproximação.
+Como nossa função é discreta (só admite valor inteiro) não podemos calcular diretamente a derivada dessa função mais podemos fazer uma boa aproximação.
 
 A derivada é uma operação matemática que permite calculara a taxa de variação de uma função ou de dois pontos muito próximos. Ela é definida pela equação 1.
 <div align="center">
@@ -25,7 +25,7 @@ A derivada é uma operação matemática que permite calculara a taxa de variaç
          <img src="https://render.githubusercontent.com/render/math?math=\Large{\frac{df}{dx}=\lim_{h\to 0} \frac{f(x %2B h)- f(x)}{h}} ">
          </p>  <p align="center"> <b>Equção 1: </b> Derivada. </p>
  </div>
- Supondo que x seja a posição que estamos na lista, então f(x) é o valor do pixel e f(x+h) é próximo pixel. Acontece que quando o intervalo h for muito pequeno vamos pegar variações decorrete de ruídos na imagem. Sem assim, não deverimos nos procupar em fazer pequenos ajustes nesse sentido. Por exmplo, podemo dizer que nossa derivada no ponto x é dada por f(x+h)-f(x-h), ou seja a diferença do pixel próximo pixel pelo pixel anterir ou ponto x.
+Supondo que x seja a posição que estamos na lista, então f(x) é o valor do pixel e f(x+h) é próximo pixel. Acontece que, quando o intervalo h for muito pequeno vamos pegar variações decorreste de ruídos na imagem. Sem assim, não deverimos nos preocupar em fazer pequenos ajustes nesse sentido. Por exemplo, podemo dizer que nossa derivada no ponto x é dada por f(x+h)-f(x-h), ou seja, a diferença do pixel próximo pixel pelo pixel anterior ou ponto x.
 
 <div align="center">
          <p align="center">
@@ -33,7 +33,7 @@ A derivada é uma operação matemática que permite calculara a taxa de variaç
          </p> <p align="center"> <b>Equação 2: </b> Derivada aproximada. </p>
  </div>
 
-Desconcideramos a divisão por h como na Equação 1, porque nesse contexto ele é apenas um normalizador da função, ou seja ele será um parâmetro que vamos passar al realizar os calculos.
+Desconsideramos a divisão por h como na Equação 1, porque nesse contexto ele é apenas um normalizador da função, ou seja, ele será um parâmetro que vamos passar ao realizar os cálculos.
 
 <div align="center">
     <p align="center">
@@ -49,7 +49,7 @@ Um dos motivos da aproximação de fizemos é por conta dos ruídos, porém essa
     </p> <p align="center"> <b>Figura 3: </b> Kernel para calculo de derivada. </p>
 </div>
 
-Na Figua 4 realizamos esse operação para toda a linha da imagem 1, tente identificar onde está a região que selecionamos.
+Na Figua 4 realizamos essa operação para toda a linha da imagem 1, tente identificar onde está a região que selecionamos.
 
 <div align="center">
     <p align="center">
@@ -57,9 +57,9 @@ Na Figua 4 realizamos esse operação para toda a linha da imagem 1, tente ident
     </p> <p align="center"> <b>Figura 4: </b> Grafico de linha da selecionada na figura 1. </p>
 </div>
 
-A lista começa com valor alto, 254 decai ate 44 e sobe novamente para 53. Essa variação acontece no intervarlo 160 à 178 (aproximado) do eixo x.
+A lista começa com valor alto, 254 decai ate 44 e sobe novamente para 53. Essa variação acontece no intervalo 160 à 178 (aproximado) do eixo x.
 
-Se expandirmos esse ideia para um plano 2D nossa função anterir pode ser decrita da seguinte forma.
+Se expandirmos esse ideia para um plano 2D nossa função anterior pode ser descrita da seguinte forma.
 
 <div align="center">
     <p align="center">
@@ -109,23 +109,22 @@ cv2.waitKey(0)
     </p> <p align="center"> <b>Figura 7: </b> Resultado do Sobel. </p>
 </div>
 
-Percebe que aplicamos o operador Sobel duas vezes, primeiro na direção x e depois na direção y. A composição dessas derivada é matematicamente conhecida com gradiente. O gradiente é um vetor que aponta na direção onde a função tem a maior variação. No entanto, o que nos interessa aqui é magnitude desse gradiente, ou seja o quão abrupta é essa variação. O múdulo do gradiente poder ser encontrado usando a Equação 2 (calculamos com a função cv2.addWeighted).
-
+Percebe que aplicamos o operador Sobel duas vezes, primeiro na direção x e depois na direção y. A composição dessas derivadas é matematicamente conhecida com gradiente. O gradiente é um vetor que aponta na direção onde a função tem a maior variação. No entanto, o que nos interessa aqui é magnitude desse gradiente, ou seja, o quão abrupta é essa variação. O módulo do gradiente poder ser encontrado usando a Equação 2 (calculamos com a função cv2.addWeighted).
 <div align="center">
          <p align="center">
          <img src="https://render.githubusercontent.com/render/math?math=G =\sqrt{{(G_x)^2} %2B {(G_y)^2}}">
          </p> <p align="center"> <b>Eqiação 3: </b> Magnitude do gradiente. </p>
  </div>
 
-O Sobel é uma das operações mais relevantes para detectar contorno em imagans. Embora exista alternaticas como cv2.Scharr que tem uma aproximação melhor da derivada. O Sobel ainda é um dos principais métodos empregado nos algoritmo de detecção de borda. 
+O Sobel é uma das operações mais relevantes para detectar contorno em imagens. Embora exista alternativas como cv2.Scharr que tem uma aproximação melhor da derivada. O Sobel ainda é um dos principais métodos empregado nos algoritmos de detecção de borda.
 
 # Algoritmo de Canny
 
-O algortimo de Canny executa varios estágio para detectar uma borda.
+O algoritmo de Canny executa vários estágio para detectar uma borda.
 
 #### 1. remoção de ruídos.
 
-Na Figura 4, o grafico da derivada apresenta bastante ruido, isso acontece porque pegamos micros variações locais. Canny usa um filtro gaussiano para resolver isso. Veja como o filtro afeta a derivada na Figura 8.
+Na Figura 4, o gráfico da derivada apresenta bastante ruido, isso acontece porque pegamos micros variações locais. Canny usa um filtro gaussiano para resolver isso. Veja como o filtro afeta a derivada na Figura 8.
 
 <div align="center">
     <p align="center">
@@ -134,14 +133,16 @@ Na Figura 4, o grafico da derivada apresenta bastante ruido, isso acontece porqu
 </div>  
 
 #### 2. Calcular gradientes.
-O filtro Sobel discutido no tópico anterir é usado aqui para calcular os gradientes.
+
+O filtro Sobel discutido no tópico anterior é usado aqui para calcular os gradientes.
 
 #### 3. Máximos locais.
-Nessa etapa uma varredura completa é realizada na imagem em busca de gradientes máximo locais, esse processo elemina bordas largas ou duplicadas.
+
+Nessa etapa uma varredura completa é realizada na imagem em busca de gradientes máximos locais, esse processo elemina bordas largas ou duplicadas.
 
 #### 4 Limiar de hesterese.
 
-Tudo que esta abaixo de minVal é descartado. o que esta entre minVal e maxVal é mantido apenas se parte do contorno estiver acima de maxVal. Na Figura 9, A é mantido porque esta acima de maxVal, C é mantido, embora esteja abaixo de maxVal ele esta conectado a A. Já o B é removido, pois esta totalmente dentro da área delimintada.
+Tudo que esta abaixo de minVal é descartado. o que esta entre minVal e maxVal é mantido apenas se parte do contorno estiver acima de maxVal. Na Figura 9, A é mantido porque esta acima de maxVal, C é mantido, embora esteja abaixo de maxVal ele esta conectado a A. Já o B é removido, pois esta totalmente dentro da área delimitada.
 
 <div align="center">
     <p align="center">
@@ -150,7 +151,7 @@ Tudo que esta abaixo de minVal é descartado. o que esta entre minVal e maxVal �
 </div>  
 
 ### Usando Canny
-No OpenCV temos uma implementação do algoritmo de Canny, o segundo e o terceiro parâmetro passados são minVal e maxVal.
+No OpenCV temos uma implementação do algoritmo de Canny, o segundo e o terceiro parâmetros passados são minVal e maxVal.
 
 ```python
 import cv2
@@ -176,7 +177,7 @@ cv2.waitKey()
 
 
 ## Conclusão
-De fato a aréa de visão computacional é permeada por aplicação matemáticas de alta complexidade. No entanto, bibliotecas como OpenCV tem simplificado, permitindo que pessoas de divesas áreas desenvolva suas própias aplicações. Se você gostou desse assunto, junte-se a nós no grupo do telegram.
+De fato a área de visão computacional é permeada por aplicação matemáticas de alta complexidade. No entanto, bibliotecas como OpenCV tem simplificado, permitindo que pessoas de diversas áreas desenvolva suas própias aplicações. Se você gostou desse assunto, junte-se a nós no grupo do [telegram](t.me/opencvBrasil).
 
 **Atenciosamente**
 
