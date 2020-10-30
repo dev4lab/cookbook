@@ -20,12 +20,17 @@ O que eu quero te mostrar neste capítulo é que podemos realizar algumas opera�
 
 Já sabemos que podemos considerar objetos representados em imagens como conjuntos e que podemos também realizar operações sobre estes conjuntos. Bom, mas se vamos fazer operações sobre este conjunto de pixels, precisamos de um outro conjunto para realizar estas operações, não é mesmo? Muito bem! Para realizarmos estas operações precisamos dos <b>Elementos estruturantes</b>!
 
-Observe a Figura 2, na qual temos uma imagem representando um objeto em tons de cinza ao lado esquerdo, enquanto que, ao lado direito, temos um pequeno conjunto de pixels que está percorrendo esta imagem (algo parecido com um filtro).
+Observe a Figura 2, na qual temos uma imagem representando um objeto em tons de cinza que é imóvel, enquanto que, se movendo, temos um pequeno conjunto de pixels que está percorrendo esta imagem (algo parecido com um filtro).
 
-<div align="center">[INSERIR IMAGEM GIF AQUI]</div>
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap2/erosao.gif" />
+    </p>
+    <p> <b>Figura 2:</b> Erosão </p>
+</div>
 
 
-A Figura 2 mostra uma operação entre dois conjuntos (O elemento estruturante e o objeto representado na imagem) que resulta em uma redução da quantidade de pixels que presentam o objeto. Esta operação é chamada de <b>Erosão</b>.
+A Figura 2 mostra uma operação entre dois conjuntos: O elemento estruturante (filtro que se move ao longo da imagem) e o objeto representado na imagem. O resultado desta operação é uma redução da quantidade de pixels que presentam o objeto. Esta operação é chamada de <b>Erosão</b>.
 
 
 ## Como funciona a Erosão em uma imagem?
@@ -34,13 +39,18 @@ Vamos considerar que o conjunto A é o objeto representado na imagem e que o con
 
 1. Primeiro é feita uma "varredura" do conjunto B (Elemento estruturante) em A para que a origem de B passe por todos os elementos de A.
 
-2. Depois é feita uma verificação: Para cada localização da origem de B, considera-se que o pixel de A é um membro do novo conjunto caso todos os elementos de B estejam contidos em A, caso contrário, descarta-se este pixel.
+2. Depois é feita uma verificação: Para cada localização da origem de B, considera-se que o pixel de A é um membro do novo conjunto caso todos os elementos de B que são diferentes de zero estejam contidos em A, caso contrário, descarta-se este pixel. (No exemplo da imagem, a cor cinza representa o valor 1 e a cor branca representa o valor zero).
 
 3. Depois de fazer essa varedura em toda a imagem, o resultado final é alcançado com o objeto tendo um conjunto menor de pixels conforme mostra a Figura 2.
 
 ## Outra Operação: A Dilatação
 
-<div align="center">[INSERIR IMAGEM GIF AQUI]</div>
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap2/dilatacao.gif" />
+    </p>
+    <p> <b>Figura 3:</b> Dilatação </p>
+</div>
 
 Observe na Figura 3 o procedimento que está sendo representado: Temos o conjunto A (o objeto representado na imagem), o conjunto B (elemento estruturante) e novamente realizamos uma varredura de B em A. A diferença é que agora, diferente do processo de Erosão, o objeto representado na imagem não "perdeu" pixels, isto é, ao invés de diminuirmos o conjunto A, ele ficou ainda maior. Quando isto acontece dizemos que o conjunto A sofreu <b>Dilatação</b>.
 
@@ -71,7 +81,7 @@ Observe a imagem abaixo. Note que não há muitos detalhes nesta imagem e isso p
     <p align="center">
     <img src="../imagens/cap2/ex1.png" width="250" height="200"/>
     </p>
-    <p> <b>Figura 2:</b> Exemplo 1 </p>
+    <p> <b>Figura 4:</b> Exemplo 1 </p>
 </div>
 
 Primeiro vamos supor que, por algum motivo, queremos eliminar a linha que conecta os circulos. Esta é uma operação de remoção de alguns pixels, por isso usaremos a <b>Erosão</b> para remover os pixels desta linha.
@@ -107,7 +117,7 @@ E temos o seguinte resultado:
     <p align="center">
     <img src="../imagens/cap2/erosao_ex1.jpg" width="250" height="200"/>
     </p>
-    <p> <b>Figura 3:</b> Resultado da Erosão </p>
+    <p> <b>Figura 5:</b> Resultado da Erosão da Fig. 4 </p>
 </div>
 
 Sinta-se à vontade para brincar um pouco com os parâmetros deste trecho de código! Veja o que acontece quando o kernel tem tamanhos menores, tamanhos maiores e quando o número de iterações é maior!
@@ -126,7 +136,7 @@ Vamos supor agora que temos uma imagem na qual os círculos tem alguns "buracos"
     <p align="center">
     <img src="../imagens/cap2/ex2.png" width="250" height="200"/>
     </p>
-    <p> <b>Figura 4:</b> Exemplo para Dilatação </p>
+    <p> <b>Figura 6:</b> Exemplo 2 </p>
 </div>
 
 E novamente podemos usar a openCV para implementar facilmente esta operação:
@@ -155,7 +165,7 @@ Temos o seguinte resultado:
     <p align="center">
     <img src="../imagens/cap2/dilatacao_ex2.jpg" width="250" height="200"/>
     </p>
-    <p> <b>Figura 5:</b> Resultado da Dilatação </p>
+    <p> <b>Figura 7:</b> Resultado da Dilatação da Fig. 6 </p>
 </div>
 
 Te convido novamente a realizar testes alterando o tamanho do kernel e a quantidade de iterações para ver o que acontece em cada caso!
