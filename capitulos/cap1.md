@@ -22,8 +22,7 @@ A derivada é uma operação matemática que permite calculara a taxa de variaç
          <img src="https://render.githubusercontent.com/render/math?math=\Large{\frac{df}{dx}=\lim_{h\to 0} \frac{f(x %2B h)- f(x)}{h}} ">
          </p>  <p align="center"> <b>Equção 1: </b> Derivada. </p>
  </div>
- Supondo que x seja a posição que estamos na lista então f(x) é o valor do pixel e f(x+h) é próximo pixel.
-Podemos fazer uma aproximação para um calculo pontual.
+ Supondo que x seja a posição que estamos na lista então f(x) é o valor do pixel e f(x+h) é próximo pixel. Acontece que quando o intervalo h for muiot pequeno vamos pegar variações decorrete de ruídos na imagem. Sem assim não deverimos procupara em fazer pequenos ajustes nesse sentido. Por exmplo podemo dizer que nossa derivado no ponto x é dada por f(x+h)-f(x-h), ou seja a diferença do pixel proximo pixel pelo pixel anterir ou ponto x. A definição matemática de derivada não combre essa suposição, portanto esmotamos fazendo uma proximação.
 
 <div align="center">
     <p align="center">
