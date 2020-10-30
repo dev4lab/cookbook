@@ -1,7 +1,10 @@
 # Detecção de Bordas
 A visão computacional é uma área da ceiência que desenvolve teorias e tecnologia tendo com objetivo extrair informações de dados multimencionais. Quase sempre, recorremos a uma analogia de como nós detectamos e reconhecemos objetos. Um objeto é caracterizado por um conjunto de atributos como: cor, texturas e forma geométrica. A extração de contorno poder forncer informções sobre a geometria. Por exemplo podemos identificar diversas formas geométricas como retangulo circulo, triangulos, linhas e outros.
 
-Nessa capítulo vamos conhecer a base dos algoritmos de deteção de borda e implementa-los o algoritmo de Canny.
+Nessa capítulo vamos conhecer a base dos algoritmos de deteção de borda e implementar o algoritmo de Canny.
+
+para executar os scripts mostrado aqui você precisará ter em sua máquina uma versão do python 3 e o OpenCV instalados.
+
 ### O que é uma borda?
 
 Uma borda á caracteriza por uma variação abrupta entre os piexels vizinhos de uma imagem.
@@ -22,28 +25,31 @@ A derivada é uma operação matemática que permite calculara a taxa de variaç
          <img src="https://render.githubusercontent.com/render/math?math=\Large{\frac{df}{dx}=\lim_{h\to 0} \frac{f(x %2B h)- f(x)}{h}} ">
          </p>  <p align="center"> <b>Equção 1: </b> Derivada. </p>
  </div>
- Supondo que x seja a posição que estamos na lista então f(x) é o valor do pixel e f(x+h) é próximo pixel. Acontece que quando o intervalo h for muiot pequeno vamos pegar variações decorrete de ruídos na imagem. Sem assim não deverimos procupara em fazer pequenos ajustes nesse sentido. Por exmplo podemo dizer que nossa derivado no ponto x é dada por f(x+h)-f(x-h), ou seja a diferença do pixel proximo pixel pelo pixel anterir ou ponto x. A definição matemática de derivada não combre essa suposição, portanto esmotamos fazendo uma proximação.
-
-<div align="center">
-    <p align="center">
-    <img src="../imagens/cap1/gride1d.png" width="300" height="50"/>
-    </p> <p align="center"> <b>Figura 2: Derivada aproximada </b> . </p>
-</div>
+ Supondo que x seja a posição que estamos na lista, então f(x) é o valor do pixel e f(x+h) é próximo pixel. Acontece que quando o intervalo h for muito pequeno vamos pegar variações decorrete de ruídos na imagem. Sem assim, não deverimos nos procupar em fazer pequenos ajustes nesse sentido. Por exmplo, podemo dizer que nossa derivada no ponto x é dada por f(x+h)-f(x-h), ou seja a diferença do pixel próximo pixel pelo pixel anterir ou ponto x.
 
 <div align="center">
          <p align="center">
          <img src="https://render.githubusercontent.com/render/math?math=\Large{\frac{dI}{dx}=I(x %2B 1)-I(x-1)} ">
-         </p> <p align="center"> <b>Equção 2: </b> Derivada aproximada. </p>
+         </p> <p align="center"> <b>Equação 2: </b> Derivada aproximada. </p>
  </div>
- Essa equação pode ser descrita por um kernel. A convolução desse kernel nos da o mesmo resultado da equação.
- 
+
+Desconcideramos a divisão por h como na Equação 1, porque nesse contexto ele é apenas um normalizador da função, ou seja ele será um parâmetro que vamos passar al realizar os calculos.
+
+<div align="center">
+    <p align="center">
+    <img src="../imagens/cap1/gride1d.png" width="300" height="50"/>
+    </p> <p align="center"> <b>Figura 2: </b> Derivada aproximada para 1. </p>
+</div>
+
+Um dos motivos da aproximação de fizemos é por conta dos ruídos, porém essa nova equação pode ser representada por um kernel. Computacionalmente é mais interessante convolver um kernel por uma imagem do que aplicar uma função. 
+
  <div align="center">
     <p align="center">
     <img src="../imagens/cap1/kernel1d.png" width="300" height="50"/>
     </p> <p align="center"> <b>Figura 3: </b> Kernel para calculo de derivada. </p>
 </div>
 
-Na Figua 2 calculamos isso para a linha da imagem, tente identificar onde está a regição que selecionamos.
+Na Figua 4 realizamos esse operação para toda a linha da imagem 1, tente identificar onde está a região que selecionamos.
 
 <div align="center">
     <p align="center">
@@ -51,8 +57,9 @@ Na Figua 2 calculamos isso para a linha da imagem, tente identificar onde está 
     </p> <p align="center"> <b>Figura 4: </b> Grafico de linha da selecionada na figura 1. </p>
 </div>
 
-Se expandirmos esse ideia para o plano 2D nossa função anterir pode ser decrita da seguinte forma.
+A lista começa com valor alto, 254 decai ate 44 e sobe novamente para 53. Essa variação acontece no intervarlo 160 à 178 (aproximado) do eixo x.
 
+Se expandirmos esse ideia para um plano 2D nossa função anterir pode ser decrita da seguinte forma.
 
 <div align="center">
     <p align="center">
@@ -60,7 +67,7 @@ Se expandirmos esse ideia para o plano 2D nossa função anterir pode ser decrit
     </p> <p align="center"> <b>Figura 5: </b> Aproximação de derivada. </p>
 </div>
 
-Agora temos dois eixos, portanto calculamos a derivada parcial. Da mesma forma podemos rescrever isso com um kernel
+Agora temos uma derivada parcial. Da mesma forma, podemos rescrever isso com um kernel
 
 <div align="center">
     <p align="center">
@@ -68,7 +75,7 @@ Agora temos dois eixos, portanto calculamos a derivada parcial. Da mesma forma p
     </p> <p align="center"> <b>Figura 6: </b> Kernel para derivada parcial. </p>
 </div>
 
-Esse par de kernel na Figura 6 tem o nome de operador Sobel. O OpenCV tem esse operador implementado aqui ![cv2.sobel](https://docs.opencv.org/3.4/d4/d86/group__imgproc__filter.html#gacea54f142e81b6758cb6f375ce782c8d)
+Esse par de kernel na Figura 6 tem o nome de operador Sobel. O OpenCV tem esse operador implementado aqui ![cv2.sobel](https://docs.opencv.org/3.4/d4/d86/group__imgproc__filter.html#gacea54f142e81b6758cb6f375ce782c8d), então vamos usar.
 
 ```python
 import cv2
@@ -76,9 +83,9 @@ ddepth = cv2.CV_16S
 # Carrega imagen "frame.png" em escala de cinza
 gray = cv2.imread("frame.png",cv2.IMREAD_GRAYSCALE)
 # calcula derivada de primeira ordem na direção x 
-grad_x = cv2.Sobel(gray, ddepth, 1, 0, ksize=3)
+grad_x = cv2.Sobel(gray, ddepth, 1, 0, ksize=3,scale = 1)
 # calcula derivada de primieira ordem na direção y
-grad_y = cv2.Sobel(gray, ddepth, 0, 1, ksize=3)
+grad_y = cv2.Sobel(gray, ddepth, 0, 1, ksize=3,scale = 1)
 
 # calcula valor absoluto e converte para uint8 
 abs_grad_x = cv2.convertScaleAbs(grad_x)
@@ -102,7 +109,7 @@ cv2.waitKey(0)
     </p> <p align="center"> <b>Figura 7: </b> Resultado do Sobel. </p>
 </div>
 
-Percebe que aplicamo o operador Sobel duas vezes, primeiro na direção x e depois na direção y. A composição dessas derivada é matematicamente conhecida com gradiente. O gradiente é um vetor que aponta na direção onde a função tem a maoir variação. No entanto, o que nos interessa aqui é magnitude desse gradiente, ou seja o quão abrupta é aquela variação. Essa operação é decrita pela Equação 2 e usarmo a função cv2.addWeighted para calcular.
+Percebe que aplicamos o operador Sobel duas vezes, primeiro na direção x e depois na direção y. A composição dessas derivada é matematicamente conhecida com gradiente. O gradiente é um vetor que aponta na direção onde a função tem a maior variação. No entanto, o que nos interessa aqui é magnitude desse gradiente, ou seja o quão abrupta é essa variação. O múdulo do gradiente poder ser encontrado usando a Equação 2 (calculamos com a função cv2.addWeighted).
 
 <div align="center">
          <p align="center">
@@ -110,18 +117,15 @@ Percebe que aplicamo o operador Sobel duas vezes, primeiro na direção x e depo
          </p> <p align="center"> <b>Eqiação 3: </b> Magnitude do gradiente. </p>
  </div>
 
-nos usamos uma imagem em escala de cinza para facilitar a copreenção, mas 
-isso pode ser aplicado em uma imagem de cor. Em imagem de cor o calculo tem como base a distância elclidiana dos
-pixels.
-
+O Sobel é uma das operações mais relevantes para detectar contorno em imagans. Embora exista alternaticas como cv2.ca que tem uma aproximação melhor da derivada. O Sobel ainda é um dos principais métodos empregado nos algoritmo de detecção de borda. 
 
 # Algoritmo de Canny
 
-O algortimo de Canny executa varios estágio para detectar uma contorno.
+O algortimo de Canny executa varios estágio para detectar uma borda.
 
 #### 1. remoção de ruídos.
 
-Na figura 4, o grafico da derivada apresenta bastante ruido, isso acontece porque pegamos micros variações locais. Canny usa um filtro gaussiano para resolver isso. Seja como o filtro afeta a derivada no Figura 8.
+Na Figura 4, o grafico da derivada apresenta bastante ruido, isso acontece porque pegamos micros variações locais. Canny usa um filtro gaussiano para resolver isso. Veja como o filtro afeta a derivada na Figura 8.
 
 <div align="center">
     <p align="center">
@@ -130,14 +134,14 @@ Na figura 4, o grafico da derivada apresenta bastante ruido, isso acontece porqu
 </div>  
 
 #### 2. Calcular gradientes.
-O filtro Sobel discutido no tópico anterir é usado aqui para calcular o gradientes.
+O filtro Sobel discutido no tópico anterir é usado aqui para calcular os gradientes.
 
 #### 3. Máximos locais.
 Nessa etapa uma varredura completa é realizada na imagem em busca de gradientes máximo locais, esse processo elemina bordas largas ou duplicadas.
 
 #### 4 Limiar de hesterese.
 
-Tudo que esta abaixo de minVal é descartado. o que esta entre minVal e maxVal é mantido apenas se parte do contorno estiver acima de maxVal. Na Figura 9, A é mantido porque esta acima de maxval, C é mantido, embora esteja abaixo de maxVal ele esta conectado a A. Já o B é removido, pois esta totalmente dentro da área delimintada.
+Tudo que esta abaixo de minVal é descartado. o que esta entre minVal e maxVal é mantido apenas se parte do contorno estiver acima de maxVal. Na Figura 9, A é mantido porque esta acima de maxVal, C é mantido, embora esteja abaixo de maxVal ele esta conectado a A. Já o B é removido, pois esta totalmente dentro da área delimintada.
 
 <div align="center">
     <p align="center">
