@@ -183,7 +183,9 @@ De fato, a área de visão computacional é permeada por aplicações matemátic
 
 **Atenciosamente**
 
-[<img src="https://raw.githubusercontent.com/Delta456/Delta456/master/img/instagram.jpg" alt="instagram logo" width="24">](https://www.instagram.com/eltonfernandosantos/?hl=pt-br) Elton fernandes dos Santos 
+[<img src="https://github.com/eltonfernando/eltonfernando/tree/master/img/instagram.jpg" alt="instagram logo" width="24">](https://www.instagram.com/eltonfernandosantos/?hl=pt-br)
+[<img src = "https://github.com/eltonfernando/eltonfernando/tree/master/img/linkdin" alt="linkdin logo" width="24">](www.linkedin.com/in/eltonfernandesdossantos)
+Elton fernandes dos Santos 
 
 Engenheiro eletricista e mestrando em Zootecnia na Universidade Federal do Mato Grosso.
 
