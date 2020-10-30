@@ -75,7 +75,7 @@ Agora temos uma derivada parcial. Da mesma forma, podemos rescrever isso com um 
     </p> <p align="center"> <b>Figura 6: </b> Kernel para derivada parcial. </p>
 </div>
 
-Esse par de kernel na Figura 6 tem o nome de operador Sobel. O OpenCV tem esse operador implementado aqui ![cv2.sobel](https://docs.opencv.org/3.4/d4/d86/group__imgproc__filter.html#gacea54f142e81b6758cb6f375ce782c8d), então vamos usar.
+Esse par de kernel na Figura 6 tem o nome de operador Sobel. O OpenCV tem esse operador implementado aqui [cv2.sobel](https://docs.opencv.org/3.4/d4/d86/group__imgproc__filter.html#gacea54f142e81b6758cb6f375ce782c8d), então vamos usar.
 
 ```python
 import cv2
@@ -175,6 +175,14 @@ cv2.waitKey()
 ## Conclusão
 De fato a aréa de visão computacional é permeada por aplicação matemáticas de alta complexidade. No entanto, bibliotecas como OpenCV tem simplificado, permitindo que pessoas de divesas áreas desenvolva suas própias aplicações. Se você gostou desse assunto, junte-se a nós no grupo do telegram.
 
+**Atenciosamente**
+
+Elton fernandes dos Santos
+
+Engenheiro eletricista e mestrando em Zootecnia na Universidade Federal do Mato Grosso.
+
+Autor do blog [visioncompy](www.visioncompy.com)
+
 ## Referências
 
 <table>
@@ -186,10 +194,4 @@ De fato a aréa de visão computacional é permeada por aplicação matemáticas
     </tr>
 </table>
 
-**Atenciosamente**
 
-Elton fernandes dos Santos
-
-Engenheiro eletricista e mestrando em Zootecnia na Universidade Federal do Mato Grosso.
-
-Autor do blog [visioncompy](www.visioncompy.com)
