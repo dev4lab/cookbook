@@ -187,7 +187,7 @@ De fato, a área de visão computacional é permeada por aplicações matemátic
 
 Engenheiro eletricista e mestrando em Zootecnia na Universidade Federal do Mato Grosso.
 
-Autor do blog [visioncompy](www.visioncompy.com)
+Autor do blog [visioncompy](http://www.visioncompy.com)
 
 ## Referências
 
