@@ -177,7 +177,7 @@ cv2.waitKey()
 
 
 ## Conclusão
-De fato a área de visão computacional é permeada por aplicação matemáticas de alta complexidade. No entanto, bibliotecas como OpenCV tem simplificado, permitindo que pessoas de diversas áreas desenvolva suas própias aplicações. Se você gostou desse assunto, junte-se a nós no grupo do [telegram](t.me/opencvBrasil).
+De fato a área de visão computacional é permeada por aplicação matemáticas de alta complexidade. No entanto, bibliotecas como OpenCV tem simplificado, permitindo que pessoas de diversas áreas desenvolva suas própias aplicações. Se você gostou desse assunto, junte-se a nós no grupo do [telegram](https://t.me/opencvBrasil).
 
 **Atenciosamente**
 
