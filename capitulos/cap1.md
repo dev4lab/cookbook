@@ -1,9 +1,14 @@
 # Detecção de Bordas
-A visão computacional é uma área da ciência que desenvolve teorias e tecnologias tendo como objetivo extrair informações de dados multidimensionais. Quase sempre, recorremos a uma analogia de como nós detectamos e reconhecemos objetos. Um objeto é caracterizado por conjuntos de atributos como: cor, texturas e forma geométrica. Nesse sentio, a extração de contorno poder representar informações importante sobre um determinado objeto. Por exemplo, podemos identificar diversas formas geométricas como retângulo circulo, triângulos, linhas e outros. Além do que os médoto de detecção não utilizam muito recurso computacional sendo uma tecnida atraente para aplicação em sistemas embaracados.
+A visão computacional é uma área da ciência que desenvolve teorias e tecnologias como objetivos de extrair informações de dados multidimensionais. Quase sempre, recorremos a uma analogia de como nós detectamos e reconhecemos objetos. Um objeto é caracterizado por conjuntos de atributos como: cor, texturas e forma geométrica. Nesse sentido, a extração de contorno poder representar informações importantes sobre um determinado objeto. Por exemplo, podemos identificar diversas formas geométricas como retângulo circulo, triângulos, linhas e outros. Além do que os médoto de detecção não utilizam muito recurso computacional sendo uma técnica atraente para aplicação em sistemas embaracados.
 
-Nessa capítulo vamos conhecer a base dos algoritmos de detecção de borda e implementar o algoritmo de Canny.
+Nessa capítulo vamos conhecer a base dos algoritmos de detecção de borda e aplicar o algoritmo de Canny.
+
+#### Dependências
 
 Para executar os scripts mostrado aqui, você precisará ter em sua máquina uma versão do python 3 e o OpenCV instalados.
+
+* python3
+* OpenCV
 
 ### O que é uma borda?
 
@@ -15,7 +20,7 @@ Uma borda á caracteriza por uma variação abrupta entre os pixels vizinhos de 
     </p> <p align="center"> <b>Figura 1:</b>  Pista de corrida </p>
 </div>
 
-Primeiro vamos pensar apenas na linha selecionada Figura 1, podemos representar por uma função I(x) cujo domínio é uma lista [254,254,173,138,79,44,45,53]
+Primeiro vamos analizar apenas na linha selecionada Figura 1, podemos representa-la por uma função I(x) cujo domínio é uma lista [254,254,173,138,79,44,45,53]
 
 Como nossa função é discreta (só admite valor inteiro) não podemos calcular diretamente a derivada dessa função mais podemos fazer uma boa aproximação.
 
@@ -25,7 +30,7 @@ A derivada é uma operação matemática que permite calcular a taxa de variaç�
          <img src="https://render.githubusercontent.com/render/math?math=\Large{\frac{df}{dx}=\lim_{h\to 0} \frac{f(x %2B h)- f(x)}{h}} ">
          </p>  <p align="center"> <b>Equção 1: </b> Derivada. </p>
  </div>
-Supondo que x seja a posição que estamos na lista, então f(x) é o valor do pixel e f(x+h) é próximo pixel. Acontece que, quando o intervalo h for muito pequeno vamos pegar variações decorreste de ruídos na imagem. Sem assim, não deverimos nos preocupar em fazer pequenos ajustes nesse sentido. Por exemplo, podemo dizer que nossa derivada no ponto x é dada por f(x+h)-f(x-h), ou seja, a diferença do próximo pixel pelo pixel anterior ou ponto x.
+Supondo que x seja a posição que estamos na lista, então f(x) é o valor do pixel e f(x+h) é próximo pixel. Acontece que, quando o intervalo h for muito pequeno vamos pegar variações decorreste de ruídos na imagem. sendo assim, não vamos preocupar em fazer pequenos ajustes nesse sentido. Por exemplo, podemo dizer que nossa derivada no ponto x é dada por f(x+h)-f(x-h), ou seja, a diferença do próximo pixel pelo pixel anterior ao ponto x.
 
 <div align="center">
          <p align="center">
@@ -33,7 +38,7 @@ Supondo que x seja a posição que estamos na lista, então f(x) é o valor do p
          </p> <p align="center"> <b>Equação 2: </b> Derivada aproximada. </p>
  </div>
 
-Desconsideramos a divisão por h como na Equação 1, porque nesse contexto ele é apenas um normalizador da função, ou seja, ele será um parâmetro que vamos passar ao realizar os cálculos.
+Desconsideramos a divisão por h da Equação 1, porque nesse contexto ele é apenas um normalizador da função, ou seja, ele será um parâmetro que vamos passar ao realizar os cálculos.
 
 <div align="center">
     <p align="center">
@@ -67,7 +72,7 @@ Se expandirmos esse ideia para um plano 2D nossa função anterior pode ser desc
     </p> <p align="center"> <b>Figura 5: </b> Aproximação de derivada. </p>
 </div>
 
-Agora temos uma derivada parcial. Da mesma forma, podemos rescrever isso por um kernel.
+Agora temos derivadas parciais. Da mesma forma, podemos rescrever isso por um kernel.
 
 <div align="center">
     <p align="center">
@@ -109,14 +114,14 @@ cv2.waitKey(0)
     </p> <p align="center"> <b>Figura 7: </b> Resultado do Sobel. </p>
 </div>
 
-Perceba que aplicamos o operador Sobel duas vezes, primeiro na direção x e depois na direção y. A composição dessas derivadas é matematicamente conhecida com gradiente. O gradiente é um vetor que aponta na direção onde a função tem a maior variação. No entanto, o que nos interessa aqui é magnitude desse gradiente, ou seja, o quão abrupta é essa variação. O módulo do gradiente poder ser encontrado usando a Equação 2 (calculamos com a função cv2.addWeighted).
+Perceba que aplicamos o operador Sobel duas vezes, primeiro na direção x e depois na direção y. A composição dessas derivadas é matematicamente conhecida como gradiente. O gradiente é um vetor que aponta na direção onde a função tem a maior variação. No entanto, o que nos interessa aqui é magnitude desse gradiente, ou seja, o quão abrupta é essa variação. O módulo do gradiente poder ser calulado usando a Equação 2 (calculamos com a função cv2.addWeighted).
 <div align="center">
          <p align="center">
          <img src="https://render.githubusercontent.com/render/math?math=G =\sqrt{{(G_x)^2} %2B {(G_y)^2}}">
          </p> <p align="center"> <b>Eqiação 3: </b> Magnitude do gradiente. </p>
  </div>
 
-O Sobel é uma das operações mais relevantes para detectar contorno em imagens. Embora exista alternativas como cv2.Scharr que tem uma aproximação melhor da derivada. O Sobel ainda é um dos principais métodos empregados nos algoritmos de detecção de borda.
+O Sobel é uma das operações mais relevantes para detectar contorno em imagens. Embora exista alternativas como cv2.Scharr que tem uma aproximação melhor da derivada. O Sobel ainda é um dos principais métodos empregados nos algoritmos para detecção de borda.
 
 # Algoritmo de Canny
 
@@ -187,7 +192,7 @@ De fato, a área de visão computacional é permeada por aplicações matemátic
 [<img src = "https://github.com/eltonfernando/eltonfernando/blob/master/img/linkdin.png" alt="linkdin logo" width="24">](www.linkedin.com/in/eltonfernandesdossantos)
 Elton fernandes dos Santos 
 
-Engenheiro eletricista e mestrando em Zootecnia na Universidade Federal do Mato Grosso.
+Engenheiro eletricista pela UNEMAT e mestrando em Zootecnia na Universidade Federal do Mato Grosso UFMT.
 
 Autor do blog [visioncompy](http://www.visioncompy.com)
 
