@@ -15,11 +15,11 @@ Neste cookbook você vai encontrar projetos rápidos elaborados para te introduz
 
 [Capítulo 3: Filtro de densidade usando Machine Learning e Clusterização](capitulos/cap3.md)
 
-[Capítulo 4: Detecção de pontos de interesse](capitulos/cap4.md)
+[Capítulo 4: Detecção de pontos de interesse (Em andamento)](capitulos/cap4.md)
 
 [Capítulo 5: Detecção de objetos com haarcascade](capitulos/cap5.md)
 
-[Capítulo 6: Detector de faces](capitulos/cap6.md)
+[Capítulo 6: Detector de faces (Em andamento)](capitulos/cap6.md)
 
 
 ## O que eu vou encontrar em cada capítulo?
